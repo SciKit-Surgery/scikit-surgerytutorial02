@@ -1,0 +1,6 @@
+[run]
+omit = 
+        ./snappytutorial02/_version.py
+        ./snappytutorial02/__init__.py
+        ./snappytutorial02/__main__.py
+        ./snappytutorial02/ui/snappytutorial02_command_line.py
