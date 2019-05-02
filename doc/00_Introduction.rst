@@ -92,12 +92,33 @@ Visit the web interface to WEISSLab and checkout out your first commit
 
 You'll notice that it say's that your commit failed. This refers to the continuous integration test failed, not that your project was lost or any thing else. By the end this tutorial you will have a green tick where now there is a red cross, for know though, don't worry.
 
+Getting Started with Issue Tracking on WEISSlab
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A critical part of quality software engineering is keeping track of changes, and maintaining a record of why changes were made. 
+WEISSlab (and gitlab, github, etc) contains functions to create and track "issues". At the moment our software doesn't 
+do anything, let's got to WEISSlab and create an issue.
+
+.. image:: weisslab_new_issue.png
+   :height: 400px
+   :alt: Check out your project on WEISS Lab
+   :align: center
+
+Give the issue a name, and assign it to yourself. This should be issue number 1. 
+.. image:: weisslab_new_issue_detail.png
+   :height: 400px
+   :alt: Check out your project on WEISS Lab
+   :align: center
+
+
+
+
 Getting Started with git
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Git is a widely used and high quality version control system. It is
 designed for multideveloper software projects. 
 
-Step 1: Make a new branch to start working on
+Step 1: Make a new branch to start working on. Prefix it with the number 1 so we know
+it's linked to issue 1.
 ::
    git checkout -b "1-get-working"
 
@@ -217,9 +238,13 @@ That's it, you've written a sphere fitting algorithm using the Python template. 
    git commit -m "Issue #1 implemted the sphere fitting algorithm"
    git push origin 1-get-working
 
+Make sure you include the hashtag #1 in your commit message, so that WEISSlab can link the change to 
+the issue you created earlier.
+
 Now anyone with access to your git repository can download and use your algorithm. However they're a lot more 
 likely to do that if they can see that your algorithm does what it's supposed to do. This is where the Python
 template starts being really helpful. 
+
 
 Start Testing with Tox
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -352,6 +377,7 @@ now try running tox again, you should see a bunch of output ending something lik
 Which tells that the functional unit tests worked, but that "lint" failed. 
 
 What is Lint
+
 ~~~~~~~~~~~~
 The SNAPPY python template used lint to check that the code is well written, according to Python's PEP 8 
 coding standard. At times this may seem unnecessary, as long as the code runs who cares whether it's 
@@ -405,9 +431,37 @@ with a nice green tick. Congratulations, you have mastered testing and continuou
    :alt: Your commit passing on weisslab
    :align: center
 
+Your code is working now. So lets draw a line under it. Use git to merge your branch back to master, 
+and push it to the origin. Then close the issue on Weisslab.
+::
+   git checkout master
+   git merge --no-ff 1-get-working
+   git push origin master
+   git branch --delete 1-get-working
+
+Go to the WEISSlab website, and close issue 1.
+
 Adding a User Interface
 ~~~~~~~~~~~~~~~~~~~~~~~
-Your library is sufficient as is
+Your library is sufficient as is, you have an implementation of an algorithm, which 
+an interested user could download and use within their own Python software. However, 
+it's often nice to include a sample application, or some sort of user interface, so 
+people can download and use your code directly. The SNAPPY Python template makes this
+easy. 
+
+Start by creating a new issue on WEISSlab, something like "Implement UI". And a new
+git branch to match
+::
+   git checkout -b 2-implement-ui
+
+
+We'll be modifying the code in the sksurgeryspherefitting/ui directory. 
+Before we start, edit tests/pylintrc back to how it was, so our code gets properly tested.
+::
+   # Add files or directories to the blacklist. They should be base names, not
+   # paths.
+   ignore=CVS
+
 
 
    
