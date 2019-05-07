@@ -27,14 +27,8 @@ SNAPPYTutorial02 is part of the `SNAPPY`_ software project, developed at the `We
 
 SNAPPYTutorial02 supports Python 2.7 and Python 3.6.
 
-SNAPPYTutorial02 is currently a demo project, which will add/multiply two numbers. Example usage:
+SNAPPYTutorial02 is intended to guide the user through using the SNAPPY Python template to create a well written and reusable algorithm library. It is intended to aid researchers in disseminating their work. 
 
-::
-
-    python snappytutorial02.py 5 8
-    python snappytutorial02.py 3 6 --multiply
-
-Please explore the project structure, and implement your own functionality.
 
 Developing
 ----------
@@ -47,37 +41,6 @@ You can clone the repository using the following command:
 ::
 
     git clone https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02
-
-
-Running tests
-^^^^^^^^^^^^^
-Pytest is used for running unit tests:
-::
-
-    pip install pytest
-    python -m pytest
-
-
-Linting
-^^^^^^^
-
-This code conforms to the PEP8 standard. Pylint can be used to analyse the code:
-
-::
-
-    pip install pylint
-    pylint --rcfile=tests/pylintrc snappytutorial02
-
-
-Installing
-----------
-
-You can pip install directly from the repository as follows:
-
-::
-
-    pip install git+https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02
-
 
 
 Contributing
