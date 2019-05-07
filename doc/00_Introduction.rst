@@ -462,7 +462,143 @@ Before we start, edit tests/pylintrc back to how it was, so our code gets proper
    # paths.
    ignore=CVS
 
+Now edit sksurgeryspherefitting/ui/sksurgeryspherefitting_demo.py, so that 
+it looks like:
+::
+  # coding=utf-8
 
+  """Uses sphere fitting to fit to vtk model"""
+  import vtk
+  from sksurgeryvtk.models.vtk_surface_model import VTKSurfaceModel
+  from sksurgeryspherefitting.algorithms import sphere_fitting
+
+  def run_demo(model_file_name, output=""):
+      """ Run the application """
+      model = VTKSurfaceModel(model_file_name, [1., 0., 0.])
+      x_values = model.get_points_as_numpy()[:, 0]
+      y_values = model.get_points_as_numpy()[:, 1]
+      z_values = model.get_points_as_numpy()[:, 2]
+
+      initial_parameters = [0.0, 0.0, 0.0, 0.0]
+      result = sphere_fitting.fit_sphere_least_squares(x_values,
+                                                       y_values,
+                                                       z_values,
+                                                       initial_parameters)
+
+      print("Result is {}".format(result))
+
+      if output != "":
+
+          sphere = vtk.vtkSphereSource()
+          sphere.SetCenter(result[0][0], result[0][1], result[0][2])
+          sphere.SetRadius(result[0][3])
+          sphere.SetThetaResolution(60)
+          sphere.SetPhiResolution(60)
+
+          writer = vtk.vtkXMLPolyDataWriter()
+          writer.SetFileName(output)
+          writer.SetInputData(sphere.GetOutput())
+          sphere.Update()
+          writer.Write()
+
+And edit sksurgeryspherefitting/ui/sksurgeryspherefitting_command_line.py:
+::
+  # coding=utf-8
+
+  """Command line processing"""
+
+
+  import argparse
+  from sksurgeryspherefitting import __version__
+  from sksurgeryspherefitting.ui.sksurgeryspherefitting_demo import run_demo
+
+
+  def main(args=None):
+      """Entry point for scikit-surgery-sphere-fitting application"""
+
+      parser = argparse.ArgumentParser(
+          description='scikit-surgery-sphere-fitting')
+
+      ## ADD POSITIONAL ARGUMENTS
+      parser.add_argument("model",
+                          type=str,
+                          help="Filename for vtk surface model")
+
+      # ADD OPTINAL ARGUMENTS
+      parser.add_argument("-o", "--output",
+                          required=False,
+                          type=str,
+                          default="",
+                          help="Write the fitted sphere to file"
+                          )
+
+      version_string = __version__
+      friendly_version_string = version_string if version_string else 'unknown'
+      parser.add_argument(
+          "--version",
+          action='version',
+          version='scikit-surgery-sphere-fitting version '
+          + friendly_version_string
+          )
+
+      args = parser.parse_args(args)
+
+      run_demo(args.model, args.output)
+
+We should also add a unit test to make sure that the demo program works, so create a file 
+tests/test_sksurgeryspherefitting_demo.py and cut and paste this:
+::
+  # coding=utf-8
+
+  """scikit-surgery-sphere-fitting tests"""
+
+  from sksurgeryspherefitting.ui.sksurgeryspherefitting_demo import run_demo
+
+  def test_fit_sphere_least_squares_demo():
+
+      model_name = 'data/CT_Level_1.vtp'
+      output_name = 'out_temp.vtp'
+
+     run_demo (model_name, output_name)
+
+Note that we need some testing data here. If you have a vtk surface file that you'd like to 
+try fitting a sphere to you can subsitute it above. Other wise you can get one from `here`_
+::
+   mkdir data
+   cd data
+   wget https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
+
+Before you run tox again, we need to tell it about the extra dependencies we've just added, so edit
+requirements.txt, which should now look like:
+::
+   numpy
+   scipy
+   vtk
+   scikit-surgeryvtk
+
+Finally we need to edit tests/pylintrc to help lint deal with python modules that use compiled libraries. 
+As lint can't see inside compiled libraries it can't find do "import vtk". So we add vtk to the 
+"extension-pkg-whitelist" in pylintrc (line 32):
+::
+   extension-pkg-whitelist=numpy, vtk
+
+If you run tox now, you should get all unit tests passing, and 100% test coverage. And if your in the
+project parent directory you should be able to run:
+::
+   python sksurgeryspherefitting data/CT_Level_1.vtp -o sphere.vtp
+
+You'll see some output on the console, and if you have a vtk viewer you can load both models and see what 
+you've done. 
+
+
+Publishing The Documentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Some thing about read the docs - you'll need an account on readthedocs and can then set a webhook.
+
+
+Creating a Release
+~~~~~~~~~~~~~~~~~~
+The SNAPPY Python template uses versioneer to define the version of your software. 
 
    
 
@@ -476,3 +612,4 @@ Before we start, edit tests/pylintrc back to how it was, so our code gets proper
 
 .. _`See page 44 of this`: https://magazines-static.raspberrypi.org/issues/full_pdfs/000/000/030/original/HelloWorld07.pdf#page=44
 .. _`PEP 8`: https://www.python.org/dev/peps/pep-0008/
+.. _`here`: https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
