@@ -3,12 +3,9 @@
 .. _Start_Coding:
 
 ===============================================
-Introduction
+Start Coding
 ===============================================
 
-
-Start Coding
-~~~~~~~~~~~~
 The python template is structured with a parent directory that contains various readme, licence files, together with 
 three Python scripts. For the moment we don't want to modify any of these. The code we will begin with is to be found
 in the subdirectory sksurgeryspherefitting
@@ -18,7 +15,7 @@ in the subdirectory sksurgeryspherefitting
 Within this directory are three more python scripts, __init__.py, __main__.py, and _version.py. None of these
 need to be modified. The actual working code is within two subdirectories, algorithms and ui(user interface). More
 complex libraries may contain more subdirectories, or less if they have no user interface. Despite the temptation 
-to get the user interface working quickly, it is always good practice to start with the algorithm (`See page 44 of this`_).
+to get the user interface working quickly, it is always good practice to start with the algorithms (`See page 44 of this`_).
 ::
    cd algorithms/
 
@@ -77,7 +74,8 @@ Copy and paste the following into your editor.
       return distance_from_centre - radius
 
 Note that there are two functions, the first FitSphere_LeastSquares is what we expect the user to call, 
-once we publish this module, anyone should be able to download and fit a sphere to their point set by calling this
+once we publish this module, anyone should be able to download your library and and fit a sphere to their points 
+by calling this
 function with the appropriate parameters. We have added a "docstring" under the function definition to tell the user
 what parameters are required and what the functions return value will be. If you want people to use your code this 
 is important. 

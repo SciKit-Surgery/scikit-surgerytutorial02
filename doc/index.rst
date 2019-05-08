@@ -12,11 +12,12 @@ Contents
   04_Planning.rst
   05_StartCoding.rst
   06_Testing.rst
+  06.1_Linting.rst
   07_UserInterface.rst
+  07.1_FixTox.rst
   08_Documentation.rst
   09_Releaseing.rst
-
-  Module Contents <modules>
+  10_Publishing.rst
 
 * :ref:`modindex`
 * :ref:`genindex`

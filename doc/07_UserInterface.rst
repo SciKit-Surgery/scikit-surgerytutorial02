@@ -6,9 +6,10 @@
 Adding a User Interface
 ===============================================
 Your library is sufficient as is, you have an implementation of an algorithm, which 
-an interested user could download and use within their own Python software. However, 
-it's often nice to include a sample application, or some sort of user interface, so 
-people can download and use your code directly. The SNAPPY Python template makes this
+an interested user could download and use within their own Python application. However, 
+it's nice to include a sample application, or some sort of user interface.  
+A basic UI allows people to download and use your code directly and also see how 
+your algorithm is meant to be used. The SNAPPY Python template makes this
 easy. 
 
 Start by creating a new issue on WEISSlab, something like "Implement UI". And a new
@@ -130,7 +131,8 @@ try fitting a sphere to you can subsitute it above. Other wise you can get one f
    cd data
    wget https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
 
-Before you run tox again, we need to tell it about the extra dependencies we've just added, so edit
+Before you run tox again, we need to tell tox about the extra dependencies we've just added 
+(`vtk`_, and `scikit-surgeryvtk`_)  so edit
 requirements.txt, which should now look like:
 ::
    numpy
@@ -138,7 +140,7 @@ requirements.txt, which should now look like:
    vtk
    scikit-surgeryvtk
 
-Finally we need to edit tests/pylintrc to help lint deal with python modules that use compiled libraries. 
+Next we need to edit tests/pylintrc to help lint deal with python modules that use compiled libraries. 
 As lint can't see inside compiled libraries it can't find do "import vtk". So we add vtk to the 
 "extension-pkg-whitelist" in pylintrc (line 32):
 ::
@@ -152,4 +154,9 @@ project parent directory you should be able to run:
 You'll see some output on the console, and if you have a vtk viewer you can load both models and see what 
 you've done. 
 
+If however you're using Python 2.7 on windows tox will fail. Similarly, when you commit and push your changes, 
+the continuous integration tests on WEISSLab will fail on windows. We need to edit tox.ini to fix this.
+
 .. _`here`: https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
+.. _`vtk`: https://pypi.org/project/vtk/
+.. _`scikit-surgeryvtk`: https://pypi.org/project/scikit-surgeryvtk/

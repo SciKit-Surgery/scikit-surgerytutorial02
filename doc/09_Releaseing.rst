@@ -1,6 +1,6 @@
 .. highlight:: shell
 
-.. _Introduction:
+.. _Releasing:
 
 ===============================================
 Getting Ready to Release 
@@ -81,10 +81,20 @@ The most important thing to do is to update the
 The readme.rst file will function as the title page of your module. It should provide enough
 information to make it clear what the module is intended to do and how to use it. The 
 SNAPPY python template will have created a readme.rst file, but this will need updating with 
-information on your module.
+information on your module. If you're looking for inspiration checkout out the 
+readme for `scikit-surgery-sphere-fitting`_. 
 
-The SNAPPY Python template uses versioneer to define the version of your software. 
+Commit and push your changes.
 ::
-   git tag -a v0.0.1 -m "First release"
-   git push origin v0.0.1
+   git add setup.py README.rst
+   git commit -m "Issue #2 updated setup.py and readme"
+   git checkout master
+   git merge --no-ff 2-implement-ui
+   git push origin master
 
+Wait until the continuous integration tests have finished on WEISSLab. You should now be
+able to visit you code on readthedocs or WEISSLab and see three green boxes, showing that 
+your code is tested (with 100% coverage) and that the docs are building. To anyone 
+considering using your code this would be very encouraging. 
+
+.. _`scikit-surgery-sphere-fitting`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/?badge=latest

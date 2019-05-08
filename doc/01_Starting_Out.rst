@@ -6,21 +6,24 @@
 Getting Started
 ===============================================
 
-Step 1: Check you have cookiecutter installed
+Step 1: The SNAPPY Python Templates uses `cookiecutter`_ to generate a project from a 
+templates. Start by checking you have cookiecutter installed
 ::
   pip install cookiecutter
 
-Step 2: Use the Python Template to create your new project. This tutorial uses an 
-example of implementing an algorithm to fit a sphere to a VTK polydata surface, so 
-we could call our project something descriptive.
+Step 2: Use the Python Template to create your new project. 
+This tutorial uses a `sphere fitting algorithm`_ as an example case, as it 
+strikes a nice balance between simplicity and usefulness. Fitting models to data
+is a key part of medical image computing, so hopefully the user can see some application
+for a slightly modified algorithm in their own work.
 ::
   cookiecutter scikit-surgeryutils https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
 
-or
+If that doesn't work try,
 ::
   python -m  cookiecutter https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
 
-Follow the prompts 
+Follow the prompts, we should call our project something descriptive, so if your doing sphere fitting:
 ::
   project_name [My New Project]: scikit-surgery-sphere-fitting
   project_slug [scikit-surgery-sphere-fitting]: sksurgeryspherefitting
@@ -72,5 +75,8 @@ Visit the web interface to WEISSLab and checkout out your first commit
    :alt: Check out your project on WEISS Lab
    :align: center
 
-You'll notice that it says that your commit failed. This refers to the continuous integration test failed, not that your project was lost or any thing else. By the end this tutorial you will have a green tick where now there is a red cross, for know though, don't worry.
+You may notice that it says that your commit failed. This refers to the continuous integration test having failed, not that your project was lost. By the end this tutorial you will have a green tick where now there is a red cross, for know though, don't worry.
 
+
+.. _`cookiecutter`: https://cookiecutter.readthedocs.io/en/latest/
+.. _`sphere fitting algorithm`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/
