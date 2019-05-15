@@ -8,7 +8,9 @@ Introduction
 
 This is tutorial 02 for the SNAPPY software collection. SNAPPY aims to support users in
 developing software applications for surgery. The aim of the tutorial is to
-introduce the user to SNAPPY. After completing the tutorial the user will have;
+introduce the user to key concepts in software engineering, enabling the user
+to write and publish robust, documented and tested implementations of their 
+algorithms. After completing the tutorial the user will have;
 
 - Used the SNAPPY Python Template to create, test, and publish an implementation of a simple 
   image processing algorithm.
