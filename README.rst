@@ -11,10 +11,6 @@ SNAPPYTutorial02
    :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/pipelines
    :alt: GitLab-CI test status
 
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/badges/master/coverage.svg
-    :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/commits/master
-    :alt: Test coverage
-
 .. image:: https://readthedocs.org/projects/snappytutorial02/badge/?version=latest
     :target: http://snappytutorial02.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
@@ -32,16 +28,6 @@ SNAPPYTutorial02 is intended to guide the user through using the SNAPPY Python t
 
 Developing
 ----------
-
-Cloning
-^^^^^^^
-
-You can clone the repository using the following command:
-
-::
-
-    git clone https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02
-
 
 Contributing
 ^^^^^^^^^^^^
