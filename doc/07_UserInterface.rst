@@ -165,11 +165,11 @@ you've done. Here's an example of a sphere fitted to a 3D ultrasound image of a 
 
 The original US data:
 
-.. figure:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/12-descriptive-name/doc/sphere.gif
+.. figure:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/master/doc/sphere.gif
 
 and with a fitted sphere
 
-.. figure:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/12-descriptive-name/doc/fitted_sphere.gif
+.. figure:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/master/doc/fitted_sphere.gif
 
 If however you're using Python 2.7 on Windows tox will fail. Similarly, when you commit and push your changes, 
 the continuous integration tests on WEISSLab will fail on windows. This because there is no python vtk package

@@ -1,7 +1,7 @@
 SNAPPY Tutorial on Software Development for Clinical Translation
 ================================================================
 
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/master/project-icon.png
+.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/master/tut02_logo.gif
    :height: 128px
    :width: 128px
    :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02
