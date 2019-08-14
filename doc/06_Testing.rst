@@ -76,6 +76,11 @@ we removed them and replaced them with sphere_fitting.py, so let's update the im
 
    from sksurgeryspherefitting.algorithms import sphere_fitting
 
+Also add an import numpy, so we can use it's approximately equal function.
+::
+
+  import numpy
+
 Now scroll down and delete the two unit tests for addition and subtraction, replacing them 
 with a test for fit_sphere_least_squares
 ::
@@ -113,7 +118,8 @@ with a test for fit_sphere_least_squares
                                                       y_values, 
                                                       z_values, 
                                                       parameters)
-    assert result[0][0] == x_centre
+
+    numpy.testing.assert_approx_equal(result[0][0], x_centre, significant=10)
 
 We've used some functions from numpy, so don't forget to add import numpy at the top of the test file;
 ::
