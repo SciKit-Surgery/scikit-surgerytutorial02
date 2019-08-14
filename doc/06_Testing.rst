@@ -108,7 +108,7 @@ with a test for fit_sphere_least_squares
         y_values[i] = y*factor + y_centre
         z_values[i] = z*factor + z_centre
        
-    parameter = [0.0, 0.0, 0.0, 0.0]
+    parameters = [0.0, 0.0, 0.0, 0.0]
     result = sphere_fitting.fit_sphere_least_squares (x_values, 
                                                       y_values, 
                                                       z_values, 
