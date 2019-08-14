@@ -138,6 +138,11 @@ module python needs for testing, so edit requirements and add scipy. numpy shoul
    numpy
    scipy
 
+After changing requirements.txt you will need to rebuild tox's virtual environments, using
+::
+
+  tox -r
+
 now try running tox again, you should see a bunch of output ending something like ...
 ::
 
