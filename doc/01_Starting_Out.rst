@@ -19,7 +19,7 @@ is a key part of medical image computing, so hopefully the user can see how thei
 algorithms could be inserted into the software template.
 ::
 
-  cookiecutter scikit-surgeryutils https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
+  cookiecutter https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
 
 If that doesn't work try,
 ::
