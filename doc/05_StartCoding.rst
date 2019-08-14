@@ -28,7 +28,7 @@ algorithm at this point.
 The following code uses vim to edit the files, you can use whatever editor you like.
 ::
 
-   rm addition.py mutliplication.py
+   rm addition.py multiplication.py
    vi sphere_fitting.py
 
 
@@ -92,8 +92,8 @@ but is good practice.
 That's it, you've written a sphere fitting algorithm using the Python template. Commit your changes;
 ::
 
-   git rm addition.py mutliplication.py
-   git add sphere_fiting.py
+   git rm addition.py multiplication.py
+   git add sphere_fitting.py
    git commit -m "Issue #1 implemted the sphere fitting algorithm"
    git push origin 1-get-working
 
