@@ -52,8 +52,9 @@ fix it and rerun tox. You should now get:
 If not, read the output and fix any remaining errors. Once you have all tests passing, commit your changes and push to origin;
 ::
 
+   git add tests/test_sksurgeryspherefitting.py
    git add requirments.txt sksurgeryspherefitting/algorithms/sphere_fitting.py tests/pylintrc
-   git commit -m "Issue #1 implemted unit test and fixed style errors"
+   git commit -m "Issue #1 implemented unit test and fixed style errors"
    git push origin 1-get-working
 
 If you wait a few minutes and visit weisslab, you should be able to see your library commit passing 

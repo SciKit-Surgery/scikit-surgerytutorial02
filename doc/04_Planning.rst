@@ -27,3 +27,8 @@ code.
   |    0005    |  What else ??                                          |                                     |  
   +------------+--------------------------------------------------------+-------------------------------------+
 
+When you've finished editing doc/requirements.rst, don't forget to update it on gitlab.
+::
+
+  git add doc/requirements.rst
+  git commit -m "Issue #1 added some functional requirements"
