@@ -11,6 +11,7 @@ where it will be easy for anyone to find and use your library. The Python
 Template provides code at the end of .gitlab-ci.yml to deploy your library when 
 you create a tag with git. 
 ::
+
    deploy pip to PyPI:
     stage: deploy
     when: manual
@@ -42,6 +43,7 @@ you create a tag with git.
 
 You should probably change this to the test.pypi index before you try this for the first time, so change it to 
 ::
+
    deploy pip to PyPI:
     stage: deploy
     when: manual
@@ -73,6 +75,7 @@ You should probably change this to the test.pypi index before you try this for t
 
 Now tag a release:
 ::
+
    git tag -a v0.0.1 -m "First release"
    git push origin v0.0.1
 

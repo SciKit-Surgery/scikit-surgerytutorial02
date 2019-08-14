@@ -11,20 +11,24 @@ done with the helpful tox package, which is configured with the tox.ini file.
 
 Navigate back to the project's parent directory.
 ::
+
    cd ../../
 
 And try running tox
 ::
+
    tox
 
 At this stage you may realise you don't have tox installed, if not, try
 ::
+
    pip install tox
 
 
 If tox runs, you should get some test failures, accompanied by informative output to the console,
 explaining what these errors are. Let's start at the top.
 ::
+
    ImportError while importing test module '/home/thompson/src/scikit-surgery-sphere-fitting/tests/test_sksurgeryspherefitting.py'.
    Hint: make sure your test modules/packages have valid Python names.
    Traceback:
@@ -40,19 +44,23 @@ The first and last two lines are the most helpful, it all started in a file in t
 it couldn't import the name "addition". That's because we deleted it and replaced it with sphere fitting. Let's 
 go into the test directory,
 ::
+
    cd tests
 
 And edit the test file 
-:: 
+::
+
    vi test_sksurgeryspherefitting.py
 
 The first line imports from the user interface (ui). We'll cover this later in the tutorial, for now let's 
 comment it out 
-:: 
+::
+
    #from sksurgeryspherefitting.ui.sksurgeryspherefitting_demo import run_demo
 
 And comment out the first test, which is for the ui.
 ::
+
   #def test_using_pytest_sksurgeryspherefitting():
   #    x = 1
   #    y = 2
@@ -65,11 +73,13 @@ And comment out the first test, which is for the ui.
 Then look at the second import statement, it asks to import addition and multiply from algorithms, but 
 we removed them and replaced them with sphere_fitting.py, so let's update the import statement
 ::
+
    from sksurgeryspherefitting.algorithms import sphere_fitting
 
 Now scroll down and delete the two unit tests for addition and subtraction, replacing them 
 with a test for fit_sphere_least_squares
 ::
+
    def test_fit_sphere_least_squares():
     x_centre = 1.0
     y_centre = 167.0
@@ -107,25 +117,30 @@ with a test for fit_sphere_least_squares
 
 We've used some functions from numpy, so don't forget to add import numpy at the top of the test file;
 ::
+
    import numpy
    
 now try running tox again
 ::
+
    cd ../
    tox
 
 you'll see that it fails, with 
 ::
+
    E   ImportError: No module named scipy.optimize
 
 We need to tell tox that we need scipy to for this module. The file requirements.txt tells tox what 
 module python needs for testing, so edit requirements and add scipy. numpy should already be there.
 ::
+
    numpy
    scipy
 
 now try running tox again, you should see a bunch of output ending something like ...
 ::
+
    ______________________________________________________ summary ______________________________________________________
    py27: commands succeeded
    py36: commands succeeded

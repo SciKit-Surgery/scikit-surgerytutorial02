@@ -10,6 +10,7 @@ The python template is structured with a parent directory that contains various 
 three Python scripts. For the moment we don't want to modify any of these. The code we will begin with is to be found
 in the subdirectory sksurgeryspherefitting
 ::
+
   cd sksurgeryspherefitting/
 
 Within this directory are three more python scripts, __init__.py, __main__.py, and _version.py. None of these
@@ -17,6 +18,7 @@ need to be modified. The actual working code is within two subdirectories, algor
 complex libraries may contain more subdirectories, or less if they have no user interface. Despite the temptation 
 to get the user interface working quickly, it is always good practice to start with the algorithms (`See page 44 of this`_).
 ::
+
    cd algorithms/
 
 The SNAPPY Python template has already populated this with a couple of example algorithms, addition and multiplication.
@@ -25,12 +27,14 @@ sphere_fitting.py. I chose sphere fitting as it was useful for me at the time, f
 algorithm at this point.
 The following code uses vim to edit the files, you can use whatever editor you like.
 ::
+
    rm addition.py mutliplication.py
    vi sphere_fitting.py
 
 
 Copy and paste the following into your editor.
 ::
+
   # coding=utf-8
   """ Module for fitting a sphere to a list of 3D points """
 
@@ -87,6 +91,7 @@ but is good practice.
 
 That's it, you've written a sphere fitting algorithm using the Python template. Commit your changes;
 ::
+
    git rm addition.py mutliplication.py
    git add sphere_fiting.py
    git commit -m "Issue #1 implemted the sphere fitting algorithm"

@@ -15,6 +15,7 @@ If we scroll back up through the test output we'll start finding some linting er
 how well you've cut and pasted you may have other errors, but let's look at the first one I get, which
 looks like this;
 ::
+
    lint runtests: commands[0] | pylint --rcfile=tests/pylintrc sksurgeryspherefitting
    ************* Module sksurgeryspherefitting.ui.sksurgeryspherefitting_command_line
    sksurgeryspherefitting/ui/sksurgeryspherefitting_command_line.py:14:0: C0301: Line too long (81/80) (line-too-long)
@@ -25,6 +26,7 @@ Let's just tell pylint to ignore the ui directory for the moment.
 Edit the file pylintrc, which is in the tests directory. Near the top of the file is an entry called 
 ignore, add "ui" to the list of things to ignore;
 ::
+
    # Add files or directories to the blacklist. They should be base names, not
    # paths.
    ignore=CVS, ui
@@ -32,6 +34,7 @@ ignore, add "ui" to the list of things to ignore;
 Now try running tox again. If you've cut and pasted the code from earlier, you should get 
 one linting error;
 ::
+
    sksurgeryspherefitting/algorithms/sphere_fitting.py:23:62: C0326: No space allowed before comma
    def _calculate_residual_sphere(parameters, x_values, y_values , z_values):
                                                                 ^ (bad-whitespace)
@@ -39,6 +42,7 @@ one linting error;
 As you can see, it's a minor error that effects readability.  edit sphere_fitting.py to 
 fix it and rerun tox. You should now get:
 ::
+
    ______________________________________________________ summary ______________________________________________________
    py27: commands succeeded
    py36: commands succeeded
@@ -47,6 +51,7 @@ fix it and rerun tox. You should now get:
 
 If not, read the output and fix any remaining errors. Once you have all tests passing, commit your changes and push to origin;
 ::
+
    git add requirments.txt sksurgeryspherefitting/algorithms/sphere_fiting.py tests/pylintrc
    git commit -m "Issue #1 implemted unit test and fixed style errors"
    git push origin 1-get-working
@@ -62,6 +67,7 @@ with a nice green tick. Congratulations, you have mastered testing and continuou
 Your code is working now. So lets draw a line under it. Use git to merge your branch back to master, 
 and push it to the origin. Then close the issue on Weisslab.
 ::
+
    git checkout master
    git merge --no-ff 1-get-working
    git push origin master

@@ -18,6 +18,7 @@ it provides an opportunity to stop and think before coding. There is a
 substantial body of evidence that thinking before coding leads to better 
 code.
 ::
+
   |    0003    |  Provides a function to fit a sphere to a list of      |                                     |
   |            |  3 dimensional points                                  |                                     |
   +------------+--------------------------------------------------------+-------------------------------------+
