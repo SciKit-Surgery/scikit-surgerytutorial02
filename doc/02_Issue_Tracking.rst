@@ -1,6 +1,6 @@
 .. highlight:: shell
 
-.. _IssueTracking
+.. _IssueTracking:
 
 ===============================================
 Getting Started with Issue Tracking on WEISSlab

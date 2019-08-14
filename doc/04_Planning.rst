@@ -1,6 +1,6 @@
 .. highlight:: shell
 
-.. _Planning
+.. _Planning:
 
 ===============================================
 Planning

@@ -10,6 +10,7 @@ Provided that you document your source code with Python docstrings, the Python
 template should be set up to use `sphinx`_ to generate nicely formatted 
 html documentation, using the command
 ::
+
    tox -e docs
 
 We use `readthedocs`_ to host our documentation, as it is then easily accessible to 
