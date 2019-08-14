@@ -85,7 +85,7 @@ Now scroll down and delete the two unit tests for addition and subtraction, repl
 with a test for fit_sphere_least_squares
 ::
 
-   def test_fit_sphere_least_squares():
+  def test_fit_sphere_least_squares():
     x_centre = 1.0
     y_centre = 167.0
     z_centre = 200.0
