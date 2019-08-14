@@ -9,22 +9,26 @@ Getting Started
 Step 1: The SNAPPY Python Templates uses `cookiecutter`_ to generate a project from a 
 templates. Start by checking you have cookiecutter installed
 ::
+
   pip install cookiecutter
 
 Step 2: Use the Python Template to create your new project. 
 This tutorial uses a `sphere fitting algorithm`_ as an example case, as it 
 strikes a nice balance between simplicity and usefulness. Fitting models to data
-is a key part of medical image computing, so hopefully the user can see some application
-for a slightly modified algorithm in their own work.
+is a key part of medical image computing, so hopefully the user can see how their own 
+algorithms could be inserted into the software template.
 ::
+
   cookiecutter scikit-surgeryutils https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
 
 If that doesn't work try,
 ::
+
   python -m  cookiecutter https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
 
-Follow the prompts, we should call our project something descriptive, so if your doing sphere fitting:
+Follow the prompts, we should call our project something descriptive, so if you're doing sphere fitting:
 ::
+
   project_name [My New Project]: scikit-surgery-sphere-fitting
   project_slug [scikit-surgery-sphere-fitting]: sksurgeryspherefitting
   project_description [scikit-surgery-sphere-fitting is a Python package]: scikit-surgery-sphere-fitting implements a least squares sphere fitting algorithm, to read a vtk poly data file, a config file, and outputs the fitted sphere
@@ -51,12 +55,13 @@ Follow the prompts, we should call our project something descriptive, so if your
 
 Enter the source directory and initialise git repository.
 ::
+
   cd sksurgeryspherefitting/
   git init
   git add .
   git commit -m "Initial commit of my sphere fitter"
 
-Create a new project on WeissLab (or CmicLab, GitHub or your preferred git host), making sure the URL matches what you set in step 3.
+Create a new project on WeissLab (or GitLab, GitHub or your preferred git host), making sure the URL matches what you set in step 3.
 
 .. image:: new_project_weisslab.png
    :height: 400px
@@ -65,6 +70,7 @@ Create a new project on WeissLab (or CmicLab, GitHub or your preferred git host)
 
 Add the remote to git and push your first commit
 ::
+
    git remote add origin https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting.git
    git push origin master
 

@@ -9,6 +9,7 @@ Modifying tox.ini to fix test failure
 The file tox.ini defines what versions of python and what operating systems your code should be
 tested with. At the top of the tox.ini file you'll see
 ::
+
    # content of: tox.ini , put in same dir as setup.py
    [tox]
    envlist = py27, py36,lint
@@ -22,6 +23,7 @@ At this point you need to make a decision, do you want your library to support P
 or do you want to be able to load and process vtk polydata? Lets assume the latter in which case you 
 just need to edit tox.ini to remove py27.
 ::
+
    # content of: tox.ini , put in same dir as setup.py
    [tox]
    envlist = py36,lint
@@ -29,6 +31,7 @@ just need to edit tox.ini to remove py27.
 
 Commit your changes and push to origin
 ::
+
    git add tox.ini tests/pylintrc tests/test_sksurgeryspherefitting_demo.py 
    git add sksurgeryspherefitting/ui/sk*.py
    git commit -m "Issue #2 added user interface"

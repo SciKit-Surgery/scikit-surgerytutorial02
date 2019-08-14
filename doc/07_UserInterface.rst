@@ -2,7 +2,7 @@
 
 .. _User_Interface:
 
-===============================================
+
 Adding a User Interface
 ===============================================
 Your library is sufficient as is, you have an implementation of an algorithm, which 
@@ -15,12 +15,14 @@ easy.
 Start by creating a new issue on WEISSlab, something like "Implement UI". And a new
 git branch to match
 ::
+
    git checkout -b 2-implement-ui
 
 
 We'll be modifying the code in the sksurgeryspherefitting/ui directory. 
 Before we start, edit tests/pylintrc back to how it was, so our code gets properly tested.
 ::
+
    # Add files or directories to the blacklist. They should be base names, not
    # paths.
    ignore=CVS
@@ -28,6 +30,7 @@ Before we start, edit tests/pylintrc back to how it was, so our code gets proper
 Now edit sksurgeryspherefitting/ui/sksurgeryspherefitting_demo.py, so that 
 it looks like:
 ::
+
   # coding=utf-8
 
   """Uses sphere fitting to fit to vtk model"""
@@ -66,6 +69,7 @@ it looks like:
 
 And edit sksurgeryspherefitting/ui/sksurgeryspherefitting_command_line.py:
 ::
+
   # coding=utf-8
 
   """Command line processing"""
@@ -111,6 +115,7 @@ And edit sksurgeryspherefitting/ui/sksurgeryspherefitting_command_line.py:
 We should also add a unit test to make sure that the demo program works, so create a file 
 tests/test_sksurgeryspherefitting_demo.py and cut and paste this:
 ::
+
   # coding=utf-8
 
   """scikit-surgery-sphere-fitting tests"""
@@ -127,6 +132,7 @@ tests/test_sksurgeryspherefitting_demo.py and cut and paste this:
 Note that we need some testing data here. If you have a vtk surface file that you'd like to 
 try fitting a sphere to you can subsitute it above. Other wise you can get one from `here`_
 ::
+
    mkdir data
    cd data
    wget https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
@@ -135,27 +141,39 @@ Before you run tox again, we need to tell tox about the extra dependencies we've
 (`vtk`_, and `scikit-surgeryvtk`_)  so edit
 requirements.txt, which should now look like:
 ::
+
    numpy
    scipy
    vtk
    scikit-surgeryvtk
 
 Next we need to edit tests/pylintrc to help lint deal with python modules that use compiled libraries. 
-As lint can't see inside compiled libraries it can't find do "import vtk". So we add vtk to the 
+Pylint can't see inside compiled libraries, so it needs help with "import vtk". So we add vtk to the 
 "extension-pkg-whitelist" in pylintrc (line 32):
 ::
+
    extension-pkg-whitelist=numpy, vtk
 
-If you run tox now, you should get all unit tests passing, and 100% test coverage. And if your in the
+If you run tox now, you should get all unit tests passing, and 100% test coverage. And if you're in the
 project parent directory you should be able to run:
 ::
+
    python sksurgeryspherefitting data/CT_Level_1.vtp -o sphere.vtp
 
 You'll see some output on the console, and if you have a vtk viewer you can load both models and see what 
-you've done. 
+you've done. Here's an example of a sphere fitted to a 3D ultrasound image of a fiducial sphere. 
 
-If however you're using Python 2.7 on windows tox will fail. Similarly, when you commit and push your changes, 
-the continuous integration tests on WEISSLab will fail on windows. We need to edit tox.ini to fix this.
+The original US data:
+
+.. figure:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/master/doc/sphere.gif
+
+and with a fitted sphere
+
+.. figure:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/master/doc/fitted_sphere.gif
+
+If however you're using Python 2.7 on Windows tox will fail. Similarly, when you commit and push your changes, 
+the continuous integration tests on WEISSLab will fail on windows. This because there is no python vtk package
+available for Python 2.7 on Windows. We can edit tox.ini to fix this.
 
 .. _`here`: https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
 .. _`vtk`: https://pypi.org/project/vtk/

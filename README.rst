@@ -1,7 +1,7 @@
-SNAPPYTutorial02
-===============================
+SNAPPY Tutorial on Software Development for Clinical Translation
+================================================================
 
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/master/project-icon.png
+.. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/master/tut02_logo.gif
    :height: 128px
    :width: 128px
    :target: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02
@@ -19,21 +19,17 @@ SNAPPYTutorial02
 
 Author: Stephen Thompson
 
-SNAPPYTutorial02 is part of the `SNAPPY`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
+This is the SNAPPY Tutorial on Software Development for Clinical Translation. It is targeted at researchers working in medical imaging and computer aided interventions, who want to maximise the impact of their work by publishing robust and reusable code.
+The tutorial will guide the user through using the SNAPPY Python template to create a well written and reusable algorithm library. 
 
-SNAPPYTutorial02 supports Python 2.7 and Python 3.6.
+The SNAPPY Tutorial on Software Development for Clinical Translation is part of the `SNAPPY`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
 
-SNAPPYTutorial02 is intended to guide the user through using the SNAPPY Python template to create a well written and reusable algorithm library. It is intended to aid researchers in disseminating their work. 
-
-
-Developing
-----------
+This SNAPPY Tutorial has been tested with Python 2.7, Python 3.6 and Python 3.7.
 
 Contributing
 ^^^^^^^^^^^^
 
 Please see the `contributing guidelines`_.
-
 
 Useful links
 ^^^^^^^^^^^^

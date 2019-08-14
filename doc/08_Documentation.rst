@@ -10,6 +10,7 @@ Provided that you document your source code with Python docstrings, the Python
 template should be set up to use `sphinx`_ to generate nicely formatted 
 html documentation, using the command
 ::
+
    tox -e docs
 
 We use `readthedocs`_ to host our documentation, as it is then easily accessible to 
@@ -54,7 +55,7 @@ And enter the readthedocs url into the URL field.
    :alt: Fill in the boxes 
    :align: center
 
-Test it out. You're documentation on readthedocs should now be
+Test it out. Your documentation on readthedocs should now be
 automatically updated each time you push a commit to WEISSLab
 
 .. _`sphinx`: http://www.sphinx-doc.org/en/master/

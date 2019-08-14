@@ -12,6 +12,7 @@ you created the module, but it will need updating. Open it and edit it.
 The most important thing to do is to update the 
 "install_requires" field, to include scipy, vtk, and scikit-surgeryvtk
 ::
+
   # coding=utf-8
   """
   Setup for scikit-surgery-sphere-fitting
@@ -86,6 +87,7 @@ readme for `scikit-surgery-sphere-fitting`_.
 
 Commit and push your changes.
 ::
+
    git add setup.py README.rst
    git commit -m "Issue #2 updated setup.py and readme"
    git checkout master
@@ -93,7 +95,7 @@ Commit and push your changes.
    git push origin master
 
 Wait until the continuous integration tests have finished on WEISSLab. You should now be
-able to visit you code on readthedocs or WEISSLab and see three green boxes, showing that 
+able to visit your code on readthedocs or WEISSLab and see three green boxes, showing that 
 your code is tested (with 100% coverage) and that the docs are building. To anyone 
 considering using your code this would be very encouraging. 
 

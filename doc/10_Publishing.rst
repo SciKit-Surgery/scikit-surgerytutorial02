@@ -6,11 +6,12 @@
 Publishing 
 ===============================================
 
-Finally if you're happy with your project you can add to the Python package index, 
+Finally, if you're mostly happy with your project you can add to the Python package index, 
 where it will be easy for anyone to find and use your library. The Python 
 Template provides code at the end of .gitlab-ci.yml to deploy your library when 
 you create a tag with git. 
 ::
+
    deploy pip to PyPI:
     stage: deploy
     when: manual
@@ -40,8 +41,9 @@ you create a tag with git.
       # Upload to pypi
       - twine upload --repository pypi dist/* --username $PYPI_USER --password $PYPI_PASS
 
-You should probably change this to the test.pypi index before you try this, so change it to 
+You should probably change this to the test.pypi index before you try this for the first time, so change it to 
 ::
+
    deploy pip to PyPI:
     stage: deploy
     when: manual
@@ -73,6 +75,7 @@ You should probably change this to the test.pypi index before you try this, so c
 
 Now tag a release:
 ::
+
    git tag -a v0.0.1 -m "First release"
    git push origin v0.0.1
 
@@ -80,15 +83,5 @@ When you visit WEISSLab there should now be a manual build stage called "deploy 
 trigger this manually and deploy your code to PyPi. To do this you will need an account on PyPi and to add
 $PYPI_USER and $PYPI_PAS as variables in your WEISSLab project. 
 
-That is all. Congratulations. 
-You have:
-
-- Used gitlab to create and manage a software repository.
-- Used tox and gitlab to test the software and create continuous integration tests.
-- Created documentation for the software using docstrings and sphinx.
-- Published the documentation to readthedocs
-- Published the software to PyPi.
-
-Your library is well tested, well documented and easily available to other researchers.
 
 .. _`scikit-surgery-sphere-fitting`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/?badge=latest
