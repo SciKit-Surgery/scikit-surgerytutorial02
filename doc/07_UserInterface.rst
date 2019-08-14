@@ -141,21 +141,30 @@ requirements.txt, which should now look like:
    scikit-surgeryvtk
 
 Next we need to edit tests/pylintrc to help lint deal with python modules that use compiled libraries. 
-As lint can't see inside compiled libraries it can't find do "import vtk". So we add vtk to the 
+Pylint can't see inside compiled libraries, so it needs help with "import vtk". So we add vtk to the 
 "extension-pkg-whitelist" in pylintrc (line 32):
 ::
    extension-pkg-whitelist=numpy, vtk
 
-If you run tox now, you should get all unit tests passing, and 100% test coverage. And if your in the
+If you run tox now, you should get all unit tests passing, and 100% test coverage. And if you're in the
 project parent directory you should be able to run:
 ::
    python sksurgeryspherefitting data/CT_Level_1.vtp -o sphere.vtp
 
 You'll see some output on the console, and if you have a vtk viewer you can load both models and see what 
-you've done. 
+you've done. Here's an example of a sphere fitted to a 3D ultrasound image of a fiducial sphere. 
 
-If however you're using Python 2.7 on windows tox will fail. Similarly, when you commit and push your changes, 
-the continuous integration tests on WEISSLab will fail on windows. We need to edit tox.ini to fix this.
+The original US data:
+
+.. figure:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/12-descriptive-name/doc/sphere.gif
+
+and with a fitted sphere
+
+.. figure:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/12-descriptive-name/doc/fitted_sphere.gif
+
+If however you're using Python 2.7 on Windows tox will fail. Similarly, when you commit and push your changes, 
+the continuous integration tests on WEISSLab will fail on windows. This because there is no python vtk package
+available for Python 2.7 on Windows. We can edit tox.ini to fix this.
 
 .. _`here`: https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
 .. _`vtk`: https://pypi.org/project/vtk/

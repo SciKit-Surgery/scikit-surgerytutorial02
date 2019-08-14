@@ -9,7 +9,7 @@ Getting Started with Issue Tracking on WEISSlab
 A critical part of quality software engineering is keeping track of changes, and maintaining a record of why changes were made. 
 WEISSlab (and gitlab, github, etc) contains functions to create and track issues. 
 Issues can be feature requests, bug fixes etc. At the moment our software doesn't 
-do anything, so let's got to WEISSlab and create an issue.
+do anything, so let's go to WEISSlab and create an issue.
 
 .. image:: weisslab_new_issue.png
    :height: 400px

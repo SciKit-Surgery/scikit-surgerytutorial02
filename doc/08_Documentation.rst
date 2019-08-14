@@ -54,7 +54,7 @@ And enter the readthedocs url into the URL field.
    :alt: Fill in the boxes 
    :align: center
 
-Test it out. You're documentation on readthedocs should now be
+Test it out. Your documentation on readthedocs should now be
 automatically updated each time you push a commit to WEISSLab
 
 .. _`sphinx`: http://www.sphinx-doc.org/en/master/

@@ -93,7 +93,7 @@ Commit and push your changes.
    git push origin master
 
 Wait until the continuous integration tests have finished on WEISSLab. You should now be
-able to visit you code on readthedocs or WEISSLab and see three green boxes, showing that 
+able to visit your code on readthedocs or WEISSLab and see three green boxes, showing that 
 your code is tested (with 100% coverage) and that the docs are building. To anyone 
 considering using your code this would be very encouraging. 
 

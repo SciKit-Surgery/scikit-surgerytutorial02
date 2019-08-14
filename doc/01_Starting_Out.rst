@@ -14,8 +14,8 @@ templates. Start by checking you have cookiecutter installed
 Step 2: Use the Python Template to create your new project. 
 This tutorial uses a `sphere fitting algorithm`_ as an example case, as it 
 strikes a nice balance between simplicity and usefulness. Fitting models to data
-is a key part of medical image computing, so hopefully the user can see some application
-for a slightly modified algorithm in their own work.
+is a key part of medical image computing, so hopefully the user can see how their own 
+algorithms could be inserted into the software template.
 ::
   cookiecutter scikit-surgeryutils https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
 
@@ -23,7 +23,7 @@ If that doesn't work try,
 ::
   python -m  cookiecutter https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
 
-Follow the prompts, we should call our project something descriptive, so if your doing sphere fitting:
+Follow the prompts, we should call our project something descriptive, so if you're doing sphere fitting:
 ::
   project_name [My New Project]: scikit-surgery-sphere-fitting
   project_slug [scikit-surgery-sphere-fitting]: sksurgeryspherefitting
@@ -56,7 +56,7 @@ Enter the source directory and initialise git repository.
   git add .
   git commit -m "Initial commit of my sphere fitter"
 
-Create a new project on WeissLab (or CmicLab, GitHub or your preferred git host), making sure the URL matches what you set in step 3.
+Create a new project on WeissLab (or GitLab, GitHub or your preferred git host), making sure the URL matches what you set in step 3.
 
 .. image:: new_project_weisslab.png
    :height: 400px

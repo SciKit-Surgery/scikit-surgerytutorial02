@@ -1,7 +1,7 @@
 .. include:: ../README.rst
 
 Contents
-~~~~~~~~
+========
 .. toctree::
   :maxdepth: 1
 
@@ -18,6 +18,7 @@ Contents
   08_Documentation.rst
   09_Releaseing.rst
   10_Publishing.rst
+  11_Conclusion.rst 
 
 * :ref:`modindex`
 * :ref:`genindex`

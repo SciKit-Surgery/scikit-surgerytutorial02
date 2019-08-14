@@ -73,14 +73,14 @@ Copy and paste the following into your editor.
                                         (z_values - z_centre)**2)
       return distance_from_centre - radius
 
-Note that there are two functions, the first FitSphere_LeastSquares is what we expect the user to call, 
-once we publish this module, anyone should be able to download your library and and fit a sphere to their points 
+Note that there are two functions, the first fit_sphere_least_squares is what we expect the user to call.
+Once we publish this module, anyone should be able to download your library and and fit a sphere to their points 
 by calling this
 function with the appropriate parameters. We have added a "docstring" under the function definition to tell the user
-what parameters are required and what the functions return value will be. If you want people to use your code this 
+what parameters are required and what the function's return value will be. If you want people to use your code this 
 is important. 
 
-The second function, _CalculateResidual_Sphere is used by SciPy's least square optimiser to fit the model, in this 
+The second function, _calculate_residual_sphere is used by SciPy's least square optimiser to fit the model, in this 
 case a sphere, though you could rewrite it to fit any geometry you like. This function is prefixed with an underscore (_)
 which tells the user that it's not meant to be called directly. It's not strictly necessary to document this function, 
 but is good practice. 

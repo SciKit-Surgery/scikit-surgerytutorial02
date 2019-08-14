@@ -1,5 +1,5 @@
-SNAPPY Tutorial on Software Development Clinical Translation
-============================================================
+SNAPPY Tutorial on Software Development for Clinical Translation
+================================================================
 
 .. image:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/master/project-icon.png
    :height: 128px
@@ -24,7 +24,7 @@ The tutorial will guide the user through using the SNAPPY Python template to cre
 
 The SNAPPY Tutorial on Software Development for Clinical Translation is part of the `SNAPPY`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
 
-The SNAPPY Tutorial on Software Development for Clinical Translation supports Python 2.7 and Python 3.6.
+This SNAPPY Tutorial has been tested with Python 2.7, Python 3.6 and Python 3.7.
 
 Contributing
 ^^^^^^^^^^^^

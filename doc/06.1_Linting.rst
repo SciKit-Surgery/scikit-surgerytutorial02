@@ -45,7 +45,7 @@ fix it and rerun tox. You should now get:
    lint: commands succeeded
    congratulations :)
 
-If not, read the output and fix any remaining errors. If so, commit your changes and push to origin;
+If not, read the output and fix any remaining errors. Once you have all tests passing, commit your changes and push to origin;
 ::
    git add requirments.txt sksurgeryspherefitting/algorithms/sphere_fiting.py tests/pylintrc
    git commit -m "Issue #1 implemted unit test and fixed style errors"

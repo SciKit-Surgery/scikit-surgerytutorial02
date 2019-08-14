@@ -17,7 +17,7 @@ And try running tox
 ::
    tox
 
-At this stage you may realise you don't have tox installed, if not try
+At this stage you may realise you don't have tox installed, if not, try
 ::
    pip install tox
 
@@ -37,7 +37,7 @@ explaining what these errors are. Let's start at the top.
    E   ImportError: cannot import name addition
 
 The first and last two lines are the most helpful, it all started in a file in the tests directory, and ended when 
-it couldn't import the name addition. That's because we deleted it and replaced it with sphere fitting. Let's 
+it couldn't import the name "addition". That's because we deleted it and replaced it with sphere fitting. Let's 
 go into the test directory,
 ::
    cd tests
@@ -68,7 +68,7 @@ we removed them and replaced them with sphere_fitting.py, so let's update the im
    from sksurgeryspherefitting.algorithms import sphere_fitting
 
 Now scroll down and delete the two unit tests for addition and subtraction, replacing them 
-with a test for FitSphere_LeastSquares
+with a test for fit_sphere_least_squares
 ::
    def test_fit_sphere_least_squares():
     x_centre = 1.0
@@ -131,7 +131,7 @@ now try running tox again, you should see a bunch of output ending something lik
    py36: commands succeeded
    ERROR:   lint: commands failed
 
-Which tells that the functional unit tests worked, but that "lint" failed. 
+Which tells us that the functional unit tests worked, but that "lint" failed. 
 
 .. _`PEP 8`: https://www.python.org/dev/peps/pep-0008/
 
