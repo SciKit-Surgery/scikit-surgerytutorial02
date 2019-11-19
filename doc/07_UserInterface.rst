@@ -135,7 +135,7 @@ try fitting a sphere to you can subsitute it above. Other wise you can get one f
 
    mkdir data
    cd data
-   wget https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
+   wget https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting/raw/master/data/CT_Level_1.vtp
 
 Before you run tox again, we need to tell tox about the extra dependencies we've just added 
 (`vtk`_, and `scikit-surgeryvtk`_)  so edit
