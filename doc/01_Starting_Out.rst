@@ -6,7 +6,7 @@
 Getting Started
 ===============================================
 
-Step 1: The SNAPPY Python Templates uses `cookiecutter`_ to generate a project from a 
+Step 1: The SciKit-Surgery Python Templates uses `cookiecutter`_ to generate a project from a 
 templates. Start by checking you have cookiecutter installed
 ::
 

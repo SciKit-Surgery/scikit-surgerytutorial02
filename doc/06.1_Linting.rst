@@ -5,9 +5,9 @@
 ===============================================
 What is Lint and PEP 8
 ===============================================
-The SNAPPY python template uses `pylint`_ to check that the code is well written, according to Python's `PEP 8`_ 
+The SciKit-Surgery python template uses `pylint`_ to check that the code is well written, according to Python's `PEP 8`_ 
 coding standard. At times this may seem unnecessary, as long as the code runs who cares whether it's 
-tidily written? However, the aim of the SNAPPY Python template is to help create code that not only works for 
+tidily written? However, the aim of the SciKit-Surgery Python template is to help create code that not only works for 
 you, but will be downloaded by others, modified and spread about. That's a lot more likely to happen if your code
 can be easily understood by others, and that's what lint helps you do. 
 
