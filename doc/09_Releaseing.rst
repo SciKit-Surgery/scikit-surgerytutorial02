@@ -7,7 +7,7 @@ Getting Ready to Release
 ===============================================
 The easiest way to distribute your python module is by creating a python wheel, and
 uploading it to the python package index. The creation of a wheel is controlled by 
-the file setup.py. The SNAPPY python template will have created a setup.py file when 
+the file setup.py. The SciKit-Surgery python template will have created a setup.py file when 
 you created the module, but it will need updating. Open it and edit it. 
 The most important thing to do is to update the 
 "install_requires" field, to include scipy, vtk, and scikit-surgeryvtk
@@ -81,7 +81,7 @@ The most important thing to do is to update the
 
 The readme.rst file will function as the title page of your module. It should provide enough
 information to make it clear what the module is intended to do and how to use it. The 
-SNAPPY python template will have created a readme.rst file, but this will need updating with 
+SciKit-Surgery python template will have created a readme.rst file, but this will need updating with 
 information on your module. If you're looking for inspiration checkout out the 
 readme for `scikit-surgery-sphere-fitting`_. 
 

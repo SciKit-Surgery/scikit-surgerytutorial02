@@ -21,7 +21,7 @@ to get the user interface working quickly, it is always good practice to start w
 
    cd algorithms/
 
-The SNAPPY Python template has already populated this with a couple of example algorithms, addition and multiplication.
+The SciKit-Surgery Python template has already populated this with a couple of example algorithms, addition and multiplication.
 These are nice examples, but a bit too simple for our tutorial. So lets delete them and create our own file, 
 sphere_fitting.py. I chose sphere fitting as it was useful for me at the time, feel free to insert your own 
 algorithm at this point.

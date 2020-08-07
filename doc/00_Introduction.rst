@@ -6,8 +6,8 @@
 Introduction
 ===============================================
 
-This is the SNAPPY Tutorial on Software Development for Clinical Translation. 
-SNAPPY aims to support users in
+This is the SciKit-Surgery Tutorial on Software Development for Clinical Translation. 
+SciKit-Surgery aims to support users in
 developing software applications for surgery and medical image computing. 
 The aim of this tutorial is to
 introduce the user to key concepts in software engineering, enabling the user
@@ -17,7 +17,7 @@ translate their research to clinical applications.
 
 After completing the tutorial the user will have;
 
-- Used the SNAPPY Python Template to create, test, and publish an implementation of a simple 
+- Used the SciKit-Surgery Python Template to create, test, and publish an implementation of a simple 
   image processing algorithm.
 
 After the completing the tutorial the user should be able to;

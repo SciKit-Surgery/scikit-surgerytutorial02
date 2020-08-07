@@ -5,7 +5,7 @@
 ===============================================
 Start Testing with Tox
 ===============================================
-The SNAPPY Python template comes preconfigured to perform functional tests on your code, to test that 
+The SciKit-Surgery Python template comes preconfigured to perform functional tests on your code, to test that 
 your code conforms to Python's coding style (`PEP 8`_), and produce documentation for your code. This is all
 done with the helpful tox package, which is configured with the tox.ini file.
 

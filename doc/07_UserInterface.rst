@@ -9,7 +9,7 @@ Your library is sufficient as is, you have an implementation of an algorithm, wh
 an interested user could download and use within their own Python application. However, 
 it's nice to include a sample application, or some sort of user interface.  
 A basic UI allows people to download and use your code directly and also see how 
-your algorithm is meant to be used. The SNAPPY Python template makes this
+your algorithm is meant to be used. The SciKit-Surgery Python template makes this
 easy. 
 
 Start by creating a new issue on WEISSlab, something like "Implement UI". And a new
@@ -165,16 +165,16 @@ you've done. Here's an example of a sphere fitted to a 3D ultrasound image of a 
 
 The original US data:
 
-.. figure:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/master/doc/sphere.gif
+.. figure:: https://github.com/UCL/snappytutorial02/raw/master/doc/sphere.gif
 
 and with a fitted sphere
 
-.. figure:: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/snappytutorial02/raw/master/doc/fitted_sphere.gif
+.. figure:: https://github.com/UCL/snappytutorial02/raw/master/doc/fitted_sphere.gif
 
 If however you're using Python 2.7 on Windows tox will fail. Similarly, when you commit and push your changes, 
 the continuous integration tests on WEISSLab will fail on windows. This because there is no python vtk package
 available for Python 2.7 on Windows. We can edit tox.ini to fix this.
 
-.. _`here`: https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
+.. _`here`: https://gihub.com/thompson318/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
 .. _`vtk`: https://pypi.org/project/vtk/
 .. _`scikit-surgeryvtk`: https://pypi.org/project/scikit-surgeryvtk/
