@@ -157,6 +157,10 @@ Pylint can't see inside compiled libraries, so it needs help with "import vtk". 
 If you run tox now, you should get all unit tests passing, and 100% test coverage. And if you're in the
 project parent directory you should be able to run:
 ::
+   source .tox/py36/bin/activate
+
+to enable the project's virtual environment, then:
+::
 
    python sksurgeryspherefitting data/CT_Level_1.vtp -o sphere.vtp
 
