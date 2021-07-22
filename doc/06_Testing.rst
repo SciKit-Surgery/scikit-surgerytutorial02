@@ -32,7 +32,7 @@ explaining what these errors are. Let's start at the top.
    ImportError while importing test module '/home/thompson/src/scikit-surgery-sphere-fitting/tests/test_sksurgeryspherefitting.py'.
    Hint: make sure your test modules/packages have valid Python names.
    Traceback:
-   .tox/py27/lib/python2.7/site-packages/six.py:709: in exec_
+   .tox/py36/lib/python3.6/site-packages/six.py:709: in exec_
     exec("""exec _code_ in _globs_, _locs_""")
    tests/test_sksurgeryspherefitting.py:5: in <module>
       from sksurgeryspherefitting.ui.sksurgeryspherefitting_demo import run_demo
@@ -153,7 +153,6 @@ now try running tox again, you should see a bunch of output ending something lik
 ::
 
    ______________________________________________________ summary ______________________________________________________
-   py27: commands succeeded
    py36: commands succeeded
    ERROR:   lint: commands failed
 

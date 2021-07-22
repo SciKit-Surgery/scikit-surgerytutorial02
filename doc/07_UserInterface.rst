@@ -175,9 +175,15 @@ and with a fitted sphere
 
 .. figure:: https://github.com/UCL/scikit-surgerytutorial02/raw/master/doc/fitted_sphere.gif
 
-If however you're using Python 2.7 on Windows tox will fail. Similarly, when you commit and push your changes, 
-the continuous integration tests on WEISSLab will fail on windows. This because there is no python vtk package
-available for Python 2.7 on Windows. We can edit tox.ini to fix this.
+Commit your changes and push to origin
+::
+
+   git add data/CT_level_1.vtp
+   git add tests/pylintrc tests/test_sksurgeryspherefitting_demo.py
+   git add sksurgeryspherefitting/ui/sk*.py
+   git commit -m "Issue #2 added user interface"
+   git push origin  2-implement-ui
+
 
 .. _`here`: https://gihub.com/thompson318/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
 .. _`vtk`: https://pypi.org/project/vtk/
