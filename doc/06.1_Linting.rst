@@ -44,7 +44,6 @@ fix it and rerun tox. You should now get:
 ::
 
    ______________________________________________________ summary ______________________________________________________
-   py27: commands succeeded
    py36: commands succeeded
    lint: commands succeeded
    congratulations :)
