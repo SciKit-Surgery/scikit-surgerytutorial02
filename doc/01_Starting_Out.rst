@@ -19,12 +19,12 @@ is a key part of medical image computing, so hopefully the user can see how thei
 algorithms could be inserted into the software template.
 ::
 
-  cookiecutter https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
+  cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git 
 
 If that doesn't work try,
 ::
 
-  python -m  cookiecutter https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate.git
+  python -m  cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git 
 
 Follow the prompts, we should call our project something descriptive, so if you're doing sphere fitting:
 ::
@@ -46,7 +46,7 @@ Follow the prompts, we should call our project something descriptive, so if you'
   2 - WEISS/SoftwareRepositories/sksurgeryspherefitting
   3 - WEISS/SoftwareRepositories/SNAPPY/sksurgeryspherefitting
   Choose from 1, 2, 3 (1, 2, 3) [1]:
-  project_url [https://weisslab.cs.ucl.ac.uk/StephenThompson/sksurgeryspherefitting]:
+  project_url [https://github.com/StephenThompson/sksurgeryspherefitting]:
   Select open_source_license:
   1 - BSD-3 license
   2 - Apache Software License 2.0
@@ -71,10 +71,10 @@ Create a new project on WeissLab (or GitLab, GitHub or your preferred git host),
 Add the remote to git and push your first commit
 ::
 
-   git remote add origin https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting.git
+   git remote add origin https://github.com/StephenThompson/scikit-surgery-sphere-fitting.git
    git push origin master
 
-Visit the web interface to WEISSLab and checkout out your first commit
+Visit the web interface to WEISSLab (or github) and checkout out your first commit
 
 .. image:: first_push_weisslab.png
    :height: 400px
