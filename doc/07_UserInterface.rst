@@ -135,7 +135,7 @@ try fitting a sphere to you can subsitute it above. Other wise you can get one f
 
    mkdir data
    cd data
-   wget https://weisslab.cs.ucl.ac.uk/StephenThompson/scikit-surgery-sphere-fitting/raw/master/data/CT_Level_1.vtp
+   wget https://github.com/thompson318/scikit-surgery-sphere-fitting/raw/master/data/CT_Level_1.vtp
 
 Before you run tox again, we need to tell tox about the extra dependencies we've just added 
 (`vtk`_, and `scikit-surgeryvtk`_)  so edit
@@ -169,11 +169,11 @@ you've done. Here's an example of a sphere fitted to a 3D ultrasound image of a 
 
 The original US data:
 
-.. figure:: https://github.com/UCL/scikit-surgerytutorial02/raw/master/doc/sphere.gif
+.. figure:: https://github.com/SciKit-Surgery/scikit-surgerytutorial02/raw/master/doc/sphere.gif
 
 and with a fitted sphere
 
-.. figure:: https://github.com/UCL/scikit-surgerytutorial02/raw/master/doc/fitted_sphere.gif
+.. figure:: https://github.com/SciKit-Surgery/scikit-surgerytutorial02/raw/master/doc/fitted_sphere.gif
 
 Commit your changes and push to origin
 ::

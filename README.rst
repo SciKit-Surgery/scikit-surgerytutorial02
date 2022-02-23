@@ -1,11 +1,13 @@
 SciKit-Surgery Tutorial on Software Development for Clinical Translation
 ========================================================================
 
-.. image:: https://github.com/UCL/scikit-surgerytutorial02/raw/master/tut02_logo.gif
+.. image:: https://github.com/SciKit-Surgery/scikit-surgerytutorial02/raw/master/tut02_logo.gif
    :height: 128px
    :width: 128px
-   :target: https://github.com/UCL/scikit-surgerytutorial02
+   :target: https://github.com/SciKit-Surgery/scikit-surgerytutorial02
    :alt: Logo
+
+|
 
 .. image:: https://readthedocs.org/projects/scikit-surgerytutorial02/badge/?version=latest
     :target: http://scikit-surgerytutorial02.readthedocs.io/en/latest/?badge=latest
@@ -15,10 +17,16 @@ SciKit-Surgery Tutorial on Software Development for Clinical Translation
    :target: https://doi.org/10.1007/s11548-020-02180-5
    :alt: The SciKit-Surgery paper
 
+.. image:: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
+   :target: CODE_OF_CONDUCT.md
+
 .. image:: https://img.shields.io/badge/MICCAI%20Educational%20Challenge-Thanks%20for%20Coming-yellow
    :target: https://miccai-sb.github.io/materials.html#mec2019
    :alt: Finalist in 2019 MICCAI Educational Challenge
 
+.. image:: https://img.shields.io/twitter/follow/scikit_surgery?style=social
+   :target: https://twitter.com/scikit_surgery?ref_src=twsrc%5Etfw
+   :alt: Follow scikit_surgery on twitter
 
 Author: Stephen Thompson
 
@@ -55,12 +63,12 @@ Supported by `Wellcome`_ and `EPSRC`_.
 
 
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
-.. _`source code repository`: https://github.com/UCL/scikit-surgerytutorial02
+.. _`source code repository`: https://github.com/SciKit-Surgery/scikit-surgerytutorial02
 .. _`Documentation`: https://scikit-surgerytutorial02.readthedocs.io
-.. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wiki
+.. _`SciKit-Surgery`: https://github.com/SciKit-Surgery/scikit-surgery
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/
-.. _`contributing guidelines`: https://github.com/UCL/scikit-surgerytutorial02/blob/master/CONTRIBUTING.rst
-.. _`license file`: https://github.com/UCL/scikit-surgerytutorial02/blob/master/LICENSE
+.. _`contributing guidelines`: https://github.com/SciKit-Surgery/scikit-surgerytutorial02/blob/master/CONTRIBUTING.rst
+.. _`license file`: https://github.com/SciKit-Surgery/scikit-surgerytutorial02/blob/master/LICENSE
 
