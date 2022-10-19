@@ -127,7 +127,7 @@ tests/test_sksurgeryspherefitting_demo.py and cut and paste this:
       model_name = 'data/CT_Level_1.vtp'
       output_name = 'out_temp.vtp'
 
-     run_demo (model_name, output_name)
+      run_demo (model_name, output_name)
 
 Note that we need some testing data here. If you have a vtk surface file that you'd like to 
 try fitting a sphere to you can subsitute it above. Other wise you can get one from `here`_

@@ -11,6 +11,12 @@ tidily written? However, the aim of the SciKit-Surgery Python template is to hel
 you, but will be downloaded by others, modified and spread about. That's a lot more likely to happen if your code
 can be easily understood by others, and that's what lint helps you do. 
 
+Navigate to the project directory, `scikit-surgery-sphere-fitting` to run pylint
+::
+
+   pylint --rcfile=tests/pylintrc tests
+
+
 If we scroll back up through the test output we'll start finding some linting errors. Depending on 
 how well you've cut and pasted you may have other errors, but let's look at the first one I get, which
 looks like this;
