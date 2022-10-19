@@ -89,7 +89,7 @@ Commit and push your changes.
 ::
 
    git add setup.py README.rst
-   git commit -m "Issue #2 updated setup.py and readme"
+   git commit -m "updated setup.py and readme (#2)"
    git checkout master
    git merge --no-ff 2-implement-ui
    git push origin master

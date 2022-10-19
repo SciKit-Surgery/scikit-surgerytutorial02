@@ -94,11 +94,11 @@ That's it, you've written a sphere fitting algorithm using the Python template. 
 
    git rm addition.py multiplication.py
    git add sphere_fitting.py
-   git commit -m "Issue #1 implemted the sphere fitting algorithm"
+   git commit -m "implemented the sphere fitting algorithm (#1)"
    git push origin 1-get-working
 
-Make sure you include the hashtag #1 in your commit message, so that WEISSlab can link the change to 
-the issue you created earlier.
+Make sure you include a short message (50 chars or less), including the hashtag #1, (#<IssueID>).
+Hence WEISSlab can link the change to the issue you created earlier.
 
 Now anyone with access to your git repository can download and use your algorithm. However they're a lot more 
 likely to do that if they can see that your algorithm does what it's supposed to do. This is where the Python

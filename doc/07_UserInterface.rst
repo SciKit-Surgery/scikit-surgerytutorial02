@@ -181,7 +181,7 @@ Commit your changes and push to origin
    git add data/CT_level_1.vtp
    git add tests/pylintrc tests/test_sksurgeryspherefitting_demo.py
    git add sksurgeryspherefitting/ui/sk*.py
-   git commit -m "Issue #2 added user interface"
+   git commit -m "added user interface (#2)"
    git push origin  2-implement-ui
 
 

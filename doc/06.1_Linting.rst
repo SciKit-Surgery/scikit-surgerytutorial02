@@ -53,7 +53,7 @@ If not, read the output and fix any remaining errors. Once you have all tests pa
 
    git add tests/test_sksurgeryspherefitting.py
    git add requirments.txt sksurgeryspherefitting/algorithms/sphere_fitting.py tests/pylintrc
-   git commit -m "Issue #1 implemented unit test and fixed style errors"
+   git commit -m "implemented unit test and fixed style errors (#1)"
    git push origin 1-get-working
 
 If you wait a few minutes and visit weisslab, you should be able to see your library commit passing 
