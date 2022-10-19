@@ -13,9 +13,9 @@ html documentation, using the command
 
    tox -e docs
 
-We use `readthedocs`_ to host our documentation, as it is then easily accessible to 
-all and sundry. At this stage you'll need to create an account on readthedocs. This is
-easy and free.
+We use `readthedocs`_ to host our documentation, as it is then easily accessible to all and sundry.
+You might need to install pandoc which `pandoc_installation`_
+At this stage you'll need to create an account on readthedocs. This is easy and free.
 
 Once you have an account, you can import your project.
 
@@ -61,3 +61,4 @@ automatically updated each time you push a commit to WEISSLab
 .. _`sphinx`: http://www.sphinx-doc.org/en/master/
 .. _`readthedocs`: https://readthedocs.org/
 .. _`webhook`: https://en.wikipedia.org/wiki/Webhook
+.. _`pandoc_installation`: https://pandoc.org/installing.html
