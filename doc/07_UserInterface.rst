@@ -164,8 +164,11 @@ to enable the project's virtual environment, then:
 
    python sksurgeryspherefitting data/CT_Level_1.vtp -o sphere.vtp
 
-You'll see some output on the console, and if you have a vtk viewer you can load both models and see what 
-you've done. Here's an example of a sphere fitted to a 3D ultrasound image of a fiducial sphere. 
+You'll see some output on the console
+(e.g., `Result is (array([136.571217  , 151.97335771, -95.51789211,   8.11853981]), 2)`.
+If you have a vtk viewer you can load both models and see what you've done.
+Alternatively, you can use the online `vtk_GeometryViewer`_ where you will need to drop vtp files in the viewer.
+Here's an example of a sphere fitted to a 3D ultrasound image of a fiducial sphere.
 
 The original US data:
 
@@ -188,3 +191,4 @@ Commit your changes and push to origin
 .. _`here`: https://gihub.com/thompson318/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
 .. _`vtk`: https://pypi.org/project/vtk/
 .. _`scikit-surgeryvtk`: https://pypi.org/project/scikit-surgeryvtk/
+.. _`vtk_GeometryViewer`: https://kitware.github.io/vtk-js/examples/GeometryViewer/index.html
