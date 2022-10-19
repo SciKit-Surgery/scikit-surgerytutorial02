@@ -95,7 +95,8 @@ That's it, you've written a sphere fitting algorithm using the Python template. 
    git rm addition.py multiplication.py
    git add sphere_fitting.py
    git commit -m "implemented the sphere fitting algorithm (#1)"
-   git push origin 1-get-working
+   cd ../../
+   git push origin 1-testing-tox-lint-pep8
 
 Make sure you include a short message (50 chars or less), including the hashtag #1, (#<IssueID>).
 Hence WEISSlab can link the change to the issue you created earlier.

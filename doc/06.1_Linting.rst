@@ -31,7 +31,7 @@ ignore, add "ui" to the list of things to ignore;
    # paths.
    ignore=CVS, ui
 
-Now try running tox again. If you've cut and pasted the code from earlier, you should get 
+Now try running tox again (e.g, `tox -r`). If you've cut and pasted the code from earlier, you should get
 one linting error;
 ::
 
@@ -39,8 +39,19 @@ one linting error;
    def _calculate_residual_sphere(parameters, x_values, y_values , z_values):
                                                                 ^ (bad-whitespace)
 
-As you can see, it's a minor error that effects readability.  edit sphere_fitting.py to 
-fix it and rerun tox. You should now get:
+   Run pylint --rcfile=tests/pylintrc sksurgeryspherefitting tests
+   ************* Module tests.test_sksurgeryspherefitting
+   tests/test_sksurgeryspherefitting.py:22:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+   tests/test_sksurgeryspherefitting.py:23:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+   ...
+   tests/test_sksurgeryspherefitting.py:55:0: W0311: Bad indentation. Found 2 spaces, expected 4 (bad-indentation)
+   tests/test_sksurgeryspherefitting.py:21:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+
+As you can see, those are minor error that effects readability but you can edit sphere_fitting.py and test_sksurgeryspherefitting.py
+to fix it and rerun tox.
+Pycharm has a `Reformat Code`_ option that can help to fix such readability issues.
+You should now get:
 ::
 
    ______________________________________________________ summary ______________________________________________________
@@ -52,28 +63,29 @@ If not, read the output and fix any remaining errors. Once you have all tests pa
 ::
 
    git add tests/test_sksurgeryspherefitting.py
-   git add requirments.txt sksurgeryspherefitting/algorithms/sphere_fitting.py tests/pylintrc
+   git add setup.py requirements.txt sksurgeryspherefitting/algorithms/sphere_fitting.py tests/pylintrc tests/test_sksurgeryspherefitting.py
    git commit -m "implemented unit test and fixed style errors (#1)"
-   git push origin 1-get-working
+   git push origin 1-testing-tox-lint-pep8
 
-If you wait a few minutes and visit weisslab, you should be able to see your library commit passing 
+If you wait a few minutes and visit GitHub, you should be able to see your library commit passing
 with a nice green tick. Congratulations, you have mastered testing and continuous integration testing. 
 
-.. image:: passing_weisslab.png
+.. image:: passing_github.png
    :height: 400px
-   :alt: Your commit passing on weisslab
+   :alt: Your commit passing on GitHub
    :align: center
 
 Your code is working now. So lets draw a line under it. Use git to merge your branch back to master, 
-and push it to the origin. Then close the issue on Weisslab.
+and push it to the origin. Then close the issue on GitHub.
 ::
 
    git checkout master
-   git merge --no-ff 1-get-working
+   git merge --no-ff 1-testing-tox-lint-pep8
    git push origin master
-   git branch --delete 1-get-working
+   git branch --delete 1-testing-tox-lint-pep8
 
-Go to the WEISSlab website, and close issue 1.
+Go to the GitHub website, and close issue 1.
 
 .. _`PEP 8`: https://www.python.org/dev/peps/pep-0008/
 .. _`pylint`: https://www.pylint.org/
+.. _`Reformat Code`: https://www.jetbrains.com/help/pycharm/reformat-and-rearrange-code.html

@@ -16,7 +16,7 @@ Step 1: Make a new branch to start working on. Prefix it with the number 1 so we
 it's linked to issue 1.
 ::
 
-   git checkout -b "1-get-working"
+   git checkout -b "1-testing-tox-lint-pep8"
 
 You can now start modifying files.
 

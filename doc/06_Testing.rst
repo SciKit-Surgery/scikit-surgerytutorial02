@@ -144,6 +144,13 @@ module python needs for testing, so edit requirements and add scipy. numpy shoul
    numpy
    scipy
 
+You will need to add spicy in setup.py for the `install_requires`:
+::
+    install_requires=[
+        'numpy',
+        'scipy'
+    ],
+
 After changing requirements.txt you will need to rebuild tox's virtual environments, using
 ::
 

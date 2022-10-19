@@ -88,24 +88,27 @@ Follow the prompts, we should call our project something descriptive, so if you'
                                                                             and outputs the fitted sphere
   pkg_name [sksurgeryspherefitting]:
   Select repository_server:
-  1 - https://weisslab.cs.ucl.ac.uk
-  2 - https://cmiclab.cs.ucl.ac.uk
-  3 - https://github.com
+  1 - https://github.com
+  2 - https://weisslab.cs.ucl.ac.uk
+  3 - https://cmiclab.cs.ucl.ac.uk
   4 - https://gitlab.com
-  Choose from 1, 2, 3, 4 (1, 2, 3, 4) [1]:
-  full_name [Your Name]: Stephen Thompson
-  repository_profile_name [StephenThompson]:
+  Choose from 1, 2, 3, 4 [1]: 1
+  full_name [Your Name]: Miguel Xochicale
+  repository_profile_name [e.g. Your GitHub Username]: mxochicale
   Select repository_path:
-  1 - StephenThompson/sksurgeryspherefitting
-  2 - WEISS/SoftwareRepositories/sksurgeryspherefitting
-  3 - WEISS/SoftwareRepositories/SNAPPY/sksurgeryspherefitting
-  Choose from 1, 2, 3 (1, 2, 3) [1]:
-  project_url [https://github.com/StephenThompson/sksurgeryspherefitting]:
+  1 - mxochicale/sksurgeryspherefitting
+  2 - SciKit-Surgery/sksurgeryspherefitting
+  3 - UCL/sksurgeryspherefitting
+  4 - niftk/sksurgeryspherefitting
+  5 - /sksurgeryspherefitting
+  Choose from 1, 2, 3, 4, 5 [1]: 1
+  project_url [https://github.com/mxochicale/sksurgeryspherefitting]:
   Select open_source_license:
   1 - BSD-3 license
   2 - Apache Software License 2.0
   3 - MIT License
-  Choose from 1, 2, 3 (1, 2, 3) [1]:
+  Choose from 1, 2, 3 [1]: 1
+  copyright_holder [University College London]:
 
 Enter the source directory and initialise git repository.
 ::
@@ -115,9 +118,9 @@ Enter the source directory and initialise git repository.
   git add .
   git commit -m "Initial commit of my sphere fitter"
 
-Create a new project on WeissLab (or GitLab, GitHub or your preferred git host), making sure the URL matches what you set in step 3.
+Create a new project on GitHub (or GitLab, WeissLab or your preferred git host), making sure the URL matches what you set in step 3 `project_url`.
 
-.. image:: new_project_weisslab.png
+.. image:: new_project_github.png
    :height: 400px
    :alt: Create new project on weisslab
    :align: center
@@ -125,12 +128,12 @@ Create a new project on WeissLab (or GitLab, GitHub or your preferred git host),
 Add the remote to git and push your first commit
 ::
 
-   git remote add origin https://github.com/StephenThompson/scikit-surgery-sphere-fitting.git
+   git remote add origin https://github.com/mxochicale/sksurgeryspherefitting.git
    git push origin master
 
-Visit the web interface to WEISSLab (or github) and checkout out your first commit
+Visit the web interface to GitHub (or your preferred git host) and checkout out your first commit
 
-.. image:: first_push_weisslab.png
+.. image:: first_push_github.png
    :height: 400px
    :alt: Check out your project on WEISS Lab
    :align: center

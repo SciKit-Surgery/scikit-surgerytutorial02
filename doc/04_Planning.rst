@@ -41,10 +41,10 @@ it provides an opportunity to stop and think before coding.
   |    0005    |  What else ??                                          |                                     |  
   +------------+--------------------------------------------------------+-------------------------------------+
 
-When you've finished editing doc/requirements.rst, don't forget to update it on github.
+When you've finished editing doc/requirements.rst, don't forget to update it on gitlab.
 ::
 
-  git add doc/requirements.rst
+  git add docs/requirements.rst
   git commit -m "added some functional requirements (#1)"
 
 .. _`Ten Simple Rules for the Open Development of Scientific Software`: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002802
