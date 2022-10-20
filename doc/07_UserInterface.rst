@@ -137,9 +137,8 @@ try fitting a sphere to you can subsitute it above. Other wise you can get one f
    cd data
    wget https://github.com/thompson318/scikit-surgery-sphere-fitting/raw/master/data/CT_Level_1.vtp
 
-Before you run tox again, we need to tell tox about the extra dependencies we've just added 
-(`vtk`_, and `scikit-surgeryvtk`_)  so edit
-requirements.txt, which should now look like:
+Before you run `tox -r` again, we need to tell tox about the extra dependencies we've just added
+(`vtk`_, and `scikit-surgeryvtk`_)  so edit requirements.txt, which should now look like:
 ::
 
    numpy
@@ -149,7 +148,7 @@ requirements.txt, which should now look like:
 
 Next we need to edit tests/pylintrc to help lint deal with python modules that use compiled libraries. 
 Pylint can't see inside compiled libraries, so it needs help with "import vtk". So we add vtk to the 
-"extension-pkg-whitelist" in pylintrc (line 32):
+"extension-pkg-whitelist" in pylintrc (line 35):
 ::
 
    extension-pkg-whitelist=numpy, vtk
