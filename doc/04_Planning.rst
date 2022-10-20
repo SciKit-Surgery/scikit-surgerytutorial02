@@ -18,7 +18,7 @@ Test driven development
 begins with describing what you intend the software to do, a process known as defining 
 the
 `software requirements`_. You should consider doing this for any software project, 
-but the how thorough you are should depend on the intended end use of your software. 
+but how thorough you are should depend on the intended end use of your software. 
 For a piece of quality controlled code to be used in a medical device it is essential. 
 For some research code to support your paper you could be more relaxed.
 
