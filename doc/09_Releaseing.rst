@@ -67,9 +67,9 @@ The most important thing to do is to update the
 
       install_requires=[
           'numpy>=1.11',
-          scipy,
-          vtk,
-          scikit-surgeryvtk
+          'spicy',
+          'vtk<9.0.0',
+          'scikit-surgeryvtk'
       ],
 
       entry_points={

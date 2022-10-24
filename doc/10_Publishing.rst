@@ -79,9 +79,9 @@ Now tag a release:
    git tag -a v0.0.1 -m "First release"
    git push origin v0.0.1
 
-When you visit WEISSLab there should now be a manual build stage called "deploy pip to PyPi". You can
+When you visit GitHub there should now be a manual build stage called "deploy pip to PyPi". You can
 trigger this manually and deploy your code to PyPi. To do this you will need an account on PyPi and to add
-$PYPI_USER and $PYPI_PAS as variables in your WEISSLab project. 
+$PYPI_USER and $PYPI_PAS as variables in your GitHub project.
 
 
 .. _`scikit-surgery-sphere-fitting`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/?badge=latest

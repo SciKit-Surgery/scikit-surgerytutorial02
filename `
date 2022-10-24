@@ -1,0 +1,22 @@
+adds/updates commit message guidelines (#26)
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Author:    mxochicale <miguel.xochicale@kcl.ac.uk>
+#
+# interactive rebase in progress; onto 82061f7
+# Last command done (1 command done):
+#    pick 6cdb007 adds/updates commit message guidelines (#26)
+# Next commands to do (7 remaining commands):
+#    pick 6dcf63d fixs code tab and adds pylint line example (#26)
+#    pick b66d955 reverting pylint instructions (#26)
+# You are currently rebasing branch '26-docs-updates-from-25' on '82061f7'.
+#
+# Changes to be committed:
+#	modified:   doc/04_Planning.rst
+#	modified:   doc/05_StartCoding.rst
+#	modified:   doc/06.1_Linting.rst
+#	modified:   doc/07_UserInterface.rst
+#	modified:   doc/09_Releaseing.rst
+#

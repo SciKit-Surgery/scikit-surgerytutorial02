@@ -9,8 +9,8 @@ Conclusion
 That is all. Congratulations. 
 You have:
 
-- Used gitlab to create and manage a software repository.
-- Used tox and gitlab to test the software and create continuous integration tests.
+- Used GitHub to create and manage a software repository.
+- Used tox and GitHub to test the software and create continuous integration tests.
 - Created documentation for the software using docstrings and sphinx.
 - Published the documentation to readthedocs
 - Published the software to PyPi.
