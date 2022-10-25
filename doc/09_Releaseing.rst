@@ -67,9 +67,9 @@ The most important thing to do is to update the
 
       install_requires=[
           'numpy>=1.11',
-          scipy,
-          vtk,
-          scikit-surgeryvtk
+          'spicy',
+          'vtk<9.0.0',
+          'scikit-surgeryvtk'
       ],
 
       entry_points={
@@ -89,7 +89,7 @@ Commit and push your changes.
 ::
 
    git add setup.py README.rst
-   git commit -m "Issue #2 updated setup.py and readme"
+   git commit -m "updated setup.py and readme (#2)"
    git checkout master
    git merge --no-ff 2-implement-ui
    git push origin master

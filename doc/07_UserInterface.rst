@@ -12,7 +12,7 @@ A basic UI allows people to download and use your code directly and also see how
 your algorithm is meant to be used. The SciKit-Surgery Python template makes this
 easy. 
 
-Start by creating a new issue on WEISSlab, something like "Implement UI". And a new
+Start by creating a new issue on GitHub, something like "Implement UI". And a new
 git branch to match
 ::
 
@@ -51,7 +51,7 @@ it looks like:
                                                        z_values,
                                                        initial_parameters)
 
-      print("Result is {}".format(result))
+      print(f"Result is {result}")
 
       if output != "":
 
@@ -122,12 +122,15 @@ tests/test_sksurgeryspherefitting_demo.py and cut and paste this:
 
   from sksurgeryspherefitting.ui.sksurgeryspherefitting_demo import run_demo
 
-  def test_fit_sphere_least_squares_demo():
+  def test_fit_sphere_least_sqs_demo():
+    """
+    test the run demo entry point
+    """
+    model_name = 'data/CT_Level_1.vtp'
+    output_name = 'out_temp.vtp'
 
-      model_name = 'data/CT_Level_1.vtp'
-      output_name = 'out_temp.vtp'
+    run_demo(model_name, output_name)
 
-     run_demo (model_name, output_name)
 
 Note that we need some testing data here. If you have a vtk surface file that you'd like to 
 try fitting a sphere to you can subsitute it above. Other wise you can get one from `here`_
@@ -137,35 +140,44 @@ try fitting a sphere to you can subsitute it above. Other wise you can get one f
    cd data
    wget https://github.com/thompson318/scikit-surgery-sphere-fitting/raw/master/data/CT_Level_1.vtp
 
-Before you run tox again, we need to tell tox about the extra dependencies we've just added 
-(`vtk`_, and `scikit-surgeryvtk`_)  so edit
-requirements.txt, which should now look like:
+Before you run again (e.g. `tox -r`), we need to tell tox about the extra dependencies we've just added
+(`vtk`_, and `scikit-surgeryvtk`_)  so edit requirements.txt, which should now look like:
 ::
 
-   numpy
+   numpy>=1.11
    scipy
-   vtk
+   vtk<9.0.0
    scikit-surgeryvtk
+
+You will need to add `vtk`_, and `scikit-surgeryvtk`_ in setup.py for the `install_requires`:
+::
+    install_requires=[
+        'numpy>=1.11',
+        'spicy',
+        'vtk<9.0.0',
+        'scikit-surgeryvtk'
+    ],
+
 
 Next we need to edit tests/pylintrc to help lint deal with python modules that use compiled libraries. 
 Pylint can't see inside compiled libraries, so it needs help with "import vtk". So we add vtk to the 
-"extension-pkg-whitelist" in pylintrc (line 32):
+"extension-pkg-whitelist" in pylintrc (line 35):
 ::
 
    extension-pkg-whitelist=numpy, vtk
 
-If you run tox now, you should get all unit tests passing, and 100% test coverage. And if you're in the
-project parent directory you should be able to run:
-::
-   source .tox/py36/bin/activate
-
-to enable the project's virtual environment, then:
+If you run tox now (e.g. `tox -r`), you should get all unit tests passing, and 100% test coverage.
+And if you're in the project parent directory you should be able to run
+(using your roject's virtual environment `source .tox/py36/bin/activate`):
 ::
 
    python sksurgeryspherefitting data/CT_Level_1.vtp -o sphere.vtp
 
-You'll see some output on the console, and if you have a vtk viewer you can load both models and see what 
-you've done. Here's an example of a sphere fitted to a 3D ultrasound image of a fiducial sphere. 
+You'll see some output on the console
+(e.g., `Result is (array([136.571217  , 151.97335771, -95.51789211,   8.11853981]), 2)`.
+If you have a vtk viewer you can load both models and see what you've done.
+Alternatively, you can use the online `vtk_GeometryViewer`_ where you will need to drop vtp files in the viewer.
+Here's an example of a sphere fitted to a 3D ultrasound image of a fiducial sphere.
 
 The original US data:
 
@@ -175,16 +187,26 @@ and with a fitted sphere
 
 .. figure:: https://github.com/SciKit-Surgery/scikit-surgerytutorial02/raw/master/doc/fitted_sphere.gif
 
+For github actions, you will need to amend `/.github/workflows/ci.yml` using only python version 3.7
+::
+    jobs:
+      test:
+        strategy:
+          matrix:
+            os: [ubuntu-latest, macos-latest, windows-latest]
+            python-ver: [3.7]
+
 Commit your changes and push to origin
 ::
 
    git add data/CT_level_1.vtp
    git add tests/pylintrc tests/test_sksurgeryspherefitting_demo.py
    git add sksurgeryspherefitting/ui/sk*.py
-   git commit -m "Issue #2 added user interface"
+   git commit -m "added user interface (#2)"
    git push origin  2-implement-ui
 
 
 .. _`here`: https://gihub.com/thompson318/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
 .. _`vtk`: https://pypi.org/project/vtk/
 .. _`scikit-surgeryvtk`: https://pypi.org/project/scikit-surgeryvtk/
+.. _`vtk_GeometryViewer`: https://kitware.github.io/vtk-js/examples/GeometryViewer/index.html

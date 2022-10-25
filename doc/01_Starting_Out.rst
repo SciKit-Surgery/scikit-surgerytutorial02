@@ -6,6 +6,56 @@
 Getting Started
 ===============================================
 
+Packages and other requirements
+~~~~~~~~~~~~
+List of software requirements list for scikit-surgery-sphere-fitting.
++------------+--------------------------------------------------------+-------------------------------------+
+|    ID      |  Description                                           |  Reference                          |
++============+========================================================+=====================================+
+|    0000    |  Pandoc: universal document converter                  |  `pandoc_installation`_             |
++------------+--------------------------------------------------------+-------------------------------------+
+
+
+Virtual environments
+~~~~~~~~~~~~
+Virtualenv, venv, conda or pyenv can be used to create virtual environments to manage python packages.
+You can use conda env by installing conda for your OS (`conda_installation`_) and use the following yml file with all dependencies.
+::
+   ## Create scikit-surgery-VE.yml in your favorite location with the following content:
+   ##
+   ##  scikit-surgery-basicVE.yml
+   ##
+   ## Some useful commands to manage your conda env:
+   ## LIST CONDA ENVS: conda list -n *VE # show list of installed packages
+   ## UPDATE CONDA: conda update -n base -c defaults conda
+   ## INSTALL CONDA EV: conda env create -f *VE.yml
+   ## UPDATE CONDA ENV: conda env update --file *VE.yml --prune
+   ## ACTIVATE CONDA ENV: conda activate *VE
+   ## REMOVE CONDA ENV: conda remove -n *VE --all
+
+   name: scikit-surgery-basicVE
+   channels:
+     - defaults
+     - conda-forge #vtk; tox;
+     - anaconda #coverage; scipy;
+   dependencies:
+     - python=3.7
+     - cookiecutter>=1.7.3
+     - numpy>=1.21.5
+     - scipy>=1.7.3
+     - tox>=3.26.0
+     - pytest>=7.1.2
+     - pylint>=2.14.5
+     - vtk>=9.0.3
+     - pip>=22.2.2
+     - pip:
+        - scikit-surgeryvtk>=1.0.6
+        - scikit-surgeryimage>=0.10.1
+        - scikit-surgerycore>=0.6.10
+
+
+Creating PythonTemplate
+~~~~~~~~~~~~
 Step 1: The SciKit-Surgery Python Templates uses `cookiecutter`_ to generate a project from a 
 templates. Start by checking you have cookiecutter installed
 ::
@@ -31,27 +81,34 @@ Follow the prompts, we should call our project something descriptive, so if you'
 
   project_name [My New Project]: scikit-surgery-sphere-fitting
   project_slug [scikit-surgery-sphere-fitting]: sksurgeryspherefitting
-  project_description [scikit-surgery-sphere-fitting is a Python package]: scikit-surgery-sphere-fitting implements a least squares sphere fitting algorithm, to read a vtk poly data file, a config file, and outputs the fitted sphere
+  project_description [scikit-surgery-sphere-fitting is a Python package]:
+                                                                            scikit-surgery-sphere-fitting implements
+                                                                            a least squares sphere fitting algorithm,
+                                                                            to read a vtk poly data file, a config file,
+                                                                            and outputs the fitted sphere
   pkg_name [sksurgeryspherefitting]:
   Select repository_server:
-  1 - https://weisslab.cs.ucl.ac.uk
-  2 - https://cmiclab.cs.ucl.ac.uk
-  3 - https://github.com
+  1 - https://github.com
+  2 - https://weisslab.cs.ucl.ac.uk
+  3 - https://cmiclab.cs.ucl.ac.uk
   4 - https://gitlab.com
-  Choose from 1, 2, 3, 4 (1, 2, 3, 4) [1]:
-  full_name [Your Name]: Stephen Thompson
-  repository_profile_name [StephenThompson]:
+  Choose from 1, 2, 3, 4 [1]: 1
+  full_name [Your Name]: Miguel Xochicale
+  repository_profile_name [e.g. Your GitHub Username]: mxochicale
   Select repository_path:
-  1 - StephenThompson/sksurgeryspherefitting
-  2 - WEISS/SoftwareRepositories/sksurgeryspherefitting
-  3 - WEISS/SoftwareRepositories/SNAPPY/sksurgeryspherefitting
-  Choose from 1, 2, 3 (1, 2, 3) [1]:
-  project_url [https://github.com/StephenThompson/sksurgeryspherefitting]:
+  1 - mxochicale/sksurgeryspherefitting
+  2 - SciKit-Surgery/sksurgeryspherefitting
+  3 - UCL/sksurgeryspherefitting
+  4 - niftk/sksurgeryspherefitting
+  5 - /sksurgeryspherefitting
+  Choose from 1, 2, 3, 4, 5 [1]: 1
+  project_url [https://github.com/mxochicale/sksurgeryspherefitting]:
   Select open_source_license:
   1 - BSD-3 license
   2 - Apache Software License 2.0
   3 - MIT License
-  Choose from 1, 2, 3 (1, 2, 3) [1]:
+  Choose from 1, 2, 3 [1]: 1
+  copyright_holder [University College London]:
 
 Enter the source directory and initialise git repository.
 ::
@@ -61,9 +118,9 @@ Enter the source directory and initialise git repository.
   git add .
   git commit -m "Initial commit of my sphere fitter"
 
-Create a new project on WeissLab (or GitLab, GitHub or your preferred git host), making sure the URL matches what you set in step 3.
+Create a new project on GitHub (or GitLab, WeissLab or your preferred git host), making sure the URL matches what you set in step 3 `project_url`.
 
-.. image:: new_project_weisslab.png
+.. image:: new_project_github.png
    :height: 400px
    :alt: Create new project on weisslab
    :align: center
@@ -71,18 +128,22 @@ Create a new project on WeissLab (or GitLab, GitHub or your preferred git host),
 Add the remote to git and push your first commit
 ::
 
-   git remote add origin https://github.com/StephenThompson/scikit-surgery-sphere-fitting.git
+   git remote add origin https://github.com/mxochicale/sksurgeryspherefitting.git
    git push origin master
 
-Visit the web interface to WEISSLab (or github) and checkout out your first commit
+Visit the web interface to GitHub (or your preferred git host) and checkout out your first commit
 
-.. image:: first_push_weisslab.png
+.. image:: first_push_github.png
    :height: 400px
    :alt: Check out your project on WEISS Lab
    :align: center
 
-You may notice that it says that your commit failed. This refers to the continuous integration test having failed, not that your project was lost. By the end this tutorial you will have a green tick where now there is a red cross, for know though, don't worry.
+You may notice that it says that your commit failed.
+This refers to the continuous integration test having failed, not that your project was lost.
+By the end this tutorial you will have a green tick where now there is a red cross, for know though, don't worry.
 
 
 .. _`cookiecutter`: https://cookiecutter.readthedocs.io/en/latest/
 .. _`sphere fitting algorithm`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/
+.. _`pandoc_installation` : https://pandoc.org/installing.html
+.. _`conda_installation` : https://conda.io/projects/conda/en/latest/user-guide/install/index.html
