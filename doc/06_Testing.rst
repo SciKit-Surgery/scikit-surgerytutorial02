@@ -144,7 +144,7 @@ module python needs for testing, so edit requirements and add scipy. numpy shoul
    numpy
    scipy
 
-You will need to add spicy in setup.py for the `install_requires`:
+You will need to add scipy in setup.py for the `install_requires`:
 ::
     install_requires=[
         'numpy',
