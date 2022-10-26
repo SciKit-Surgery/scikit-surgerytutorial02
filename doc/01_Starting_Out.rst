@@ -8,13 +8,7 @@ Getting Started
 
 Packages and other requirements
 ~~~~~~~~~~~~
-List of software requirements list for scikit-surgery-sphere-fitting.
-+------------+--------------------------------------------------------+-------------------------------------+
-|    ID      |  Description                                           |  Reference                          |
-+============+========================================================+=====================================+
-|    0000    |  Pandoc: universal document converter                  |  `pandoc_installation`_             |
-+------------+--------------------------------------------------------+-------------------------------------+
-
+scikit-surgery-sphere-fitting require pandoc: universal document converter `pandoc_installation`_.
 
 Virtual environments
 ~~~~~~~~~~~~
@@ -69,7 +63,8 @@ is a key part of medical image computing, so hopefully the user can see how thei
 algorithms could be inserted into the software template.
 ::
 
-  cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git 
+  conda activate scikit-surgery-basicVE
+  cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git
 
 If that doesn't work try,
 ::
@@ -110,6 +105,9 @@ Follow the prompts, we should call our project something descriptive, so if you'
   Choose from 1, 2, 3 [1]: 1
   copyright_holder [University College London]:
 
+
+Initialise git repository
+~~~~~~~~~~~~
 Enter the source directory and initialise git repository.
 ::
 
@@ -118,7 +116,8 @@ Enter the source directory and initialise git repository.
   git add .
   git commit -m "Initial commit of my sphere fitter"
 
-Create a new project on GitHub (or GitLab, WeissLab or your preferred git host), making sure the URL matches what you set in step 3 `project_url`.
+Create a new project on GitHub (or GitLab, WeissLab or your preferred git host), making sure the URL matches
+what you set in step 3 (e.g., `project_url [https://github.com/mxochicale/sksurgeryspherefitting]`.
 
 .. image:: new_project_github.png
    :height: 400px

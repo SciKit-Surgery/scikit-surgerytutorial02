@@ -28,7 +28,8 @@ SciKit-Surgery Tutorial on Software Development for Clinical Translation
    :target: https://twitter.com/scikit_surgery?ref_src=twsrc%5Etfw
    :alt: Follow scikit_surgery on twitter
 
-Author: Stephen Thompson
+Author(s): Stephen Thompson
+Contributor(s): Miguel Xochicale, Thomas Dowrick and Matt Clarkson
 
 This is the SciKit-Surgery Tutorial on Software Development for Clinical Translation. It is targeted at researchers working in medical imaging and computer aided interventions, who want to maximise the impact of their work by publishing robust and reusable code.
 The tutorial will guide the user through using the SciKit-Surgery Python template to create a well written and reusable algorithm library. 
