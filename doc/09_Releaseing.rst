@@ -29,7 +29,10 @@ The most important thing to do is to update the
       name='scikit-surgery-sphere-fitting',
       version=versioneer.get_version(),
       cmdclass=versioneer.get_cmdclass(),
-      description='scikit-surgery-sphere-fitting implements a least squares sphere fitting algorithm, to read a vtk poly data file, a config file, and outputs the fitted sphere',
+      description='scikit-surgery-sphere-fitting implements a 
+                    least squares sphere fitting algorithm, 
+                    to read a vtk poly data file, a config file, and 
+                    outputs the fitted sphere',
       long_description=long_description,
       long_description_content_type='text/x-rst',
       url='https://github.com/StephenThompson/sksurgeryspherefitting',

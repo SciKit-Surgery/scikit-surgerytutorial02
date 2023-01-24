@@ -15,9 +15,9 @@ Virtual environments
 Virtualenv, venv, conda or pyenv can be used to create virtual environments to manage python packages.
 You can use conda env by installing conda for your OS (`conda_installation`_) and use the following yml file with all dependencies.
 ::
-   ## Create scikit-surgery-VE.yml in your favorite location with the following content:
+   ## Create scikit-surgerytutorial02VE.yml in your favorite location with the following content:
    ##
-   ##  scikit-surgery-basicVE.yml
+   ##  scikit-surgerytutorial02VE.yml
    ##
    ## Some useful commands to manage your conda env:
    ## LIST CONDA ENVS: conda list -n *VE # show list of installed packages
@@ -27,7 +27,7 @@ You can use conda env by installing conda for your OS (`conda_installation`_) an
    ## ACTIVATE CONDA ENV: conda activate *VE
    ## REMOVE CONDA ENV: conda remove -n *VE --all
 
-   name: scikit-surgery-basicVE
+   name: scikit-surgerytutorial02VE
    channels:
      - defaults
      - conda-forge #vtk; tox;
@@ -63,7 +63,7 @@ is a key part of medical image computing, so hopefully the user can see how thei
 algorithms could be inserted into the software template.
 ::
 
-  conda activate scikit-surgery-basicVE
+  conda activate scikit-surgerytutorial02VE
   cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git
 
 If that doesn't work try,
@@ -77,10 +77,10 @@ Follow the prompts, we should call our project something descriptive, so if you'
   project_name [My New Project]: scikit-surgery-sphere-fitting
   project_slug [scikit-surgery-sphere-fitting]: sksurgeryspherefitting
   project_description [scikit-surgery-sphere-fitting is a Python package]:
-                                                                            scikit-surgery-sphere-fitting implements
-                                                                            a least squares sphere fitting algorithm,
-                                                                            to read a vtk poly data file, a config file,
-                                                                            and outputs the fitted sphere
+                                  scikit-surgery-sphere-fitting implements
+                                  a least squares sphere fitting algorithm,
+                                  to read a vtk poly data file, a config file,
+                                  and outputs the fitted sphere.
   pkg_name [sksurgeryspherefitting]:
   Select repository_server:
   1 - https://github.com
