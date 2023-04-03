@@ -15,9 +15,9 @@ Virtual environments
 Virtualenv, venv, conda or pyenv can be used to create virtual environments to manage python packages.
 You can use conda env by installing conda for your OS (`conda_installation`_) and use the following yml file with all dependencies.
 ::
-   ## Create scikit-surgerytutorial02VE.yml in your favorite location with the following content:
+   ## Create scikit-surgeryTUTORIAL02VE.yml in your favorite location with the following content:
    ##
-   ##  scikit-surgerytutorial02VE.yml
+   ##  scikit-surgeryTUTORIAL02VE.yml
    ##
    ## Some useful commands to manage your conda env:
    ## LIST CONDA ENVS: conda list -n *VE # show list of installed packages
@@ -27,26 +27,23 @@ You can use conda env by installing conda for your OS (`conda_installation`_) an
    ## ACTIVATE CONDA ENV: conda activate *VE
    ## REMOVE CONDA ENV: conda remove -n *VE --all
 
-   name: scikit-surgerytutorial02VE
+   name: scikit-surgeryTUTORIAL02VE
    channels:
-     - defaults
      - conda-forge #vtk; tox;
-     - anaconda #coverage; scipy;
    dependencies:
-     - python=3.7
+     - python=3.8
      - cookiecutter>=1.7.3
      - numpy>=1.21.5
      - scipy>=1.7.3
      - tox>=3.26.0
      - pytest>=7.1.2
-     - pylint>=2.14.5
-     - vtk>=9.0.3
+     - pylint<=2.17.0
+     - vtk>=9.2.5
      - pip>=22.2.2
      - pip:
-        - scikit-surgeryvtk>=1.0.6
+        - scikit-surgeryvtk==2.0rc0
         - scikit-surgeryimage>=0.10.1
         - scikit-surgerycore>=0.6.10
-
 
 Creating PythonTemplate
 ~~~~~~~~~~~~
