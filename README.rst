@@ -36,7 +36,7 @@ The tutorial will guide the user through using the SciKit-Surgery Python templat
 
 The SciKit-Surgery Tutorial on Software Development for Clinical Translation is part of the `SciKit-Surgery`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
 
-This SciKit-Surgery Tutorial has been tested with Python 2.7, Python 3.6 and Python 3.7.
+This SciKit-Surgery Tutorial is tested on Python 3.8. and may support other Python versions.
 
 Contributing
 ^^^^^^^^^^^^
