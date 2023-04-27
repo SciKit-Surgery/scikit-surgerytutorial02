@@ -55,13 +55,13 @@ it looks like:
 
       if output != "":
 
-          sphere = vtk.vtkSphereSource()
+          sphere = vtk.vtkSphereSource() #pylint:disable=no-member
           sphere.SetCenter(result[0][0], result[0][1], result[0][2])
           sphere.SetRadius(result[0][3])
           sphere.SetThetaResolution(60)
           sphere.SetPhiResolution(60)
 
-          writer = vtk.vtkXMLPolyDataWriter()
+          writer = vtk.vtkXMLPolyDataWriter() #pylint:disable=no-member
           writer.SetFileName(output)
           writer.SetInputData(sphere.GetOutput())
           sphere.Update()
@@ -91,7 +91,7 @@ And edit sksurgeryspherefitting/ui/sksurgeryspherefitting_command_line.py:
                           type=str,
                           help="Filename for vtk surface model")
 
-      # ADD OPTINAL ARGUMENTS
+      # ADD OPTIONAL ARGUMENTS
       parser.add_argument("-o", "--output",
                           required=False,
                           type=str,
@@ -146,16 +146,16 @@ Before you run again (e.g. `tox -r`), we need to tell tox about the extra depend
 
    numpy>=1.11
    scipy
-   vtk<9.0.0
-   scikit-surgeryvtk
+   vtk>=9.2.5
+   scikit-surgeryvtk==2.0rc0
 
 You will need to add `vtk`_, and `scikit-surgeryvtk`_ in setup.py for the `install_requires`:
 ::
     install_requires=[
         'numpy>=1.11',
         'spicy',
-        'vtk<9.0.0',
-        'scikit-surgeryvtk'
+        'vtk>=9.2.5',
+        'scikit-surgeryvtk==2.0rc0'
     ],
 
 
@@ -164,7 +164,7 @@ Pylint can't see inside compiled libraries, so it needs help with "import vtk". 
 "extension-pkg-whitelist" in pylintrc (line 35):
 ::
 
-   extension-pkg-whitelist=numpy, vtk
+   extension-pkg-allow-list=numpy, vtk
 
 If you run tox now (e.g. `tox -r`), you should get all unit tests passing, and 100% test coverage.
 And if you're in the project parent directory you should be able to run
@@ -194,7 +194,7 @@ For github actions, you will need to amend `/.github/workflows/ci.yml` using onl
         strategy:
           matrix:
             os: [ubuntu-latest, macos-latest, windows-latest]
-            python-ver: [3.7]
+            python-ver: [3.8]
 
 Commit your changes and push to origin
 ::

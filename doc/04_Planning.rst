@@ -11,6 +11,8 @@ some helpful inspiration for new researchers/developers.
 Rules 1 to 3 cover thinking carefully
 about exactly what you want your software to do and how it will interface with
 existing software to create a useful application.
+Also consider to read `Goals of Good Software Design`_ which should be
+robust, understandable, extendible, modular, maintainable, and reusable.
 
 `Test driven development`_ is a useful software development tool to ensure that
 your code not only works but demonstrably performs the function(s) you intended.
@@ -50,3 +52,4 @@ When you've finished editing doc/requirements.rst, don't forget to update it on 
 .. _`Ten Simple Rules for the Open Development of Scientific Software`: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002802
 .. _`software requirements`: http://andtr.com/the-importance-of-software-requirements
 .. _`Test driven development`: https://en.wikipedia.org/wiki/Test-driven_development
+.. _`Goals of Good Software Design`: https://github.com/lorensen/VTKExamples/blob/master/src/VTKBook/02Chapter2.md#22-goals-of-good-software-design

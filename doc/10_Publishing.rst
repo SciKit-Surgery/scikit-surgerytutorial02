@@ -79,9 +79,13 @@ Now tag a release:
    git tag -a v0.0.1 -m "First release"
    git push origin v0.0.1
 
+You might like to add some release cycle versions (schedules for alpha, beta, RC and full bugfix support).
+See how `python versions`_ are done.
+
 When you visit GitHub there should now be a manual build stage called "deploy pip to PyPi". You can
 trigger this manually and deploy your code to PyPi. To do this you will need an account on PyPi and to add
 $PYPI_USER and $PYPI_PAS as variables in your GitHub project.
 
 
 .. _`scikit-surgery-sphere-fitting`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/?badge=latest
+.. _`python versions`: https://peps.python.org/pep-0602
