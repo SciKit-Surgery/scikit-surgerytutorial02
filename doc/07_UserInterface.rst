@@ -151,6 +151,7 @@ Before you run again (e.g. `tox -r`), we need to tell tox about the extra depend
 
 You will need to add `vtk`_, and `scikit-surgeryvtk`_ in setup.py for the `install_requires`:
 ::
+
     install_requires=[
         'numpy>=1.11',
         'spicy',
@@ -189,6 +190,7 @@ and with a fitted sphere
 
 For github actions, you will need to amend `/.github/workflows/ci.yml` using only python version 3.7
 ::
+
     jobs:
       test:
         strategy:

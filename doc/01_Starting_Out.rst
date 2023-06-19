@@ -15,6 +15,7 @@ Virtual environments
 Virtualenv, venv, conda or pyenv can be used to create virtual environments to manage python packages.
 You can use conda env by installing conda for your OS (`conda_installation`_) and use the following yml file with all dependencies.
 ::
+
    ## Create scikit-surgeryTUTORIAL02VE.yml in your favorite location with the following content:
    ##
    ##  scikit-surgeryTUTORIAL02VE.yml
