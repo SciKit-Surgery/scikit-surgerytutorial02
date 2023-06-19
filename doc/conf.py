@@ -55,15 +55,6 @@ static_folder = 'static'
 html_static_path = [static_folder]
 
 
-def generate_apidocs(*args):
-    """Generate API docs automatically by trawling the available modules"""
-
-def setup(app):
-    # Hook to allow for automatic generation of API docs
-    # before doc deployment begins.
-    app.connect('builder-inited', generate_apidocs)
-
-
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
