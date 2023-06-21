@@ -146,6 +146,7 @@ module python needs for testing, so edit requirements and add scipy. numpy shoul
 
 You will need to add scipy in setup.py for the `install_requires`:
 ::
+
     install_requires=[
         'numpy',
         'scipy'

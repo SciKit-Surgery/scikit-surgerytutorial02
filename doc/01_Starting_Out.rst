@@ -7,14 +7,15 @@ Getting Started
 ===============================================
 
 Packages and other requirements
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 scikit-surgery-sphere-fitting require pandoc: universal document converter `pandoc_installation`_.
 
 Virtual environments
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 Virtualenv, venv, conda or pyenv can be used to create virtual environments to manage python packages.
 You can use conda env by installing conda for your OS (`conda_installation`_) and use the following yml file with all dependencies.
 ::
+
    ## Create scikit-surgeryTUTORIAL02VE.yml in your favorite location with the following content:
    ##
    ##  scikit-surgeryTUTORIAL02VE.yml
@@ -53,7 +54,7 @@ You can use conda env by installing conda for your OS (`conda_installation`_) an
         - sphinx_rtd_theme
 
 Creating PythonTemplate
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 Step 1: Create a local directory to host your project.
 
 Step 2: The SciKit-Surgery Python Templates uses `cookiecutter`_ to generate a project from a
@@ -113,7 +114,7 @@ Follow the prompts, we should call our project something descriptive, so if you'
 
 
 Initialise git repository
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 Enter the source directory and initialise git repository.
 ::
 
