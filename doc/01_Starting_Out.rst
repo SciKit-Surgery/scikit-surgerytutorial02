@@ -40,7 +40,7 @@ You can use conda env by installing conda for your OS (`conda_installation`_) an
         - cookiecutter
         - numpy
         - vtk>=9.2.5
-        - scikit-surgeryvtk==2.0rc0
+        - scikit-surgeryvtk>=2.0.1
         - scikit-surgeryimage>=0.10.1
         - scikit-surgerycore>=0.6.10
         ###############################################

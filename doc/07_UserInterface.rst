@@ -147,7 +147,7 @@ Before you run again (e.g. `tox -r`), we need to tell tox about the extra depend
    numpy>=1.11
    spicy
    vtk>=9.2.5
-   scikit-surgeryvtk==2.0.1
+   scikit-surgeryvtk>=2.0.1
 
 You will need to add `vtk`_, and `scikit-surgeryvtk`_ in setup.py for the `install_requires`:
 ::
@@ -156,7 +156,7 @@ You will need to add `vtk`_, and `scikit-surgeryvtk`_ in setup.py for the `insta
         'numpy>=1.11',
         'spicy',
         'vtk>=9.2.5',
-        'scikit-surgeryvtk==2.0.1'
+        'scikit-surgeryvtk>=2.0.1'
     ],
 
 
