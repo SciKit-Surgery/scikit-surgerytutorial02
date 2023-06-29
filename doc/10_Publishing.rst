@@ -10,16 +10,15 @@ Finally, if you're mostly happy with your project you can add to the Python pack
 where it will be easy for anyone to find and use your library. The Python 
 Template provides code at the end of ci.yml to deploy your library when you create a tag with git.
 
-You should probably change this to the test.pypi index before you try this for the first time, so change it to 
 ::
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: test
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/checkout@master
       - name: Set up Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v4
         with:
           python-version: 3.8
 
@@ -28,11 +27,11 @@ You should probably change this to the test.pypi index before you try this for t
 
       - name: Build wheel
         run: |
-          python setup.py bdist_wheel
+          python setup.py sdist bdist_wheel
+
       - name: Publish package if tagged release
         if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
         uses: pypa/gh-action-pypi-publish@master
-        # You need to generate a PYPI API token and add it to your GitHub secrets
         with:
           user: __token__
           password: ${{ secrets.PYPI_API_TOKEN }}
