@@ -31,7 +31,7 @@ ignore, add "ui" to the list of things to ignore;
    # paths.
    ignore=CVS, ui
 
-Now try running tox again (e.g, `tox -r`). If you've cut and pasted the code from earlier, you should get
+Now try running tox again (e.g, `tox -r`). If you've cut and pasted the code from earlier, you should then get
 one linting error;
 ::
 

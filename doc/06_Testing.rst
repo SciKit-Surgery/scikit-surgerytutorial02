@@ -166,5 +166,11 @@ now try running tox again, you should see a bunch of output ending something lik
 
 Which tells us that the functional unit tests worked, but that "lint" failed. 
 
+One alternative way to also linting and unit testing your individual files is using:
+::
+
+    pylint --rcfile=tests/pylintrc $LIB_PATH/python_file.py
+    pytest -v -s test/test_name.py
+
 .. _`PEP 8`: https://www.python.org/dev/peps/pep-0008/
 
