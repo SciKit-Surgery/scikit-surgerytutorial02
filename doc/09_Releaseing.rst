@@ -93,9 +93,9 @@ Commit and push your changes.
 
    git add setup.py README.rst
    git commit -m "updated setup.py and readme (#2)"
-   git checkout master
-   git merge --no-ff 2-implement-ui
-   git push origin master
+   git checkout main
+   git branch --merged | grep -i -v -E "master|main" | xargs git branch -d
+   git push origin main
 
 Wait until the continuous integration tests have finished on WEISSLab. You should now be
 able to visit your code on readthedocs or WEISSLab and see three green boxes, showing that 

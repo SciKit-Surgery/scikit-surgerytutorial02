@@ -75,13 +75,13 @@ with a nice green tick. Congratulations, you have mastered testing and continuou
    :alt: Your commit passing on GitHub
    :align: center
 
-Your code is working now. So lets draw a line under it. Use git to merge your branch back to master, 
+Your code is working now. So lets draw a line under it. Use git to merge your branch back to main,
 and push it to the origin. Then close the issue on GitHub.
 ::
 
-   git checkout master
+   git checkout main
    git merge --no-ff 1-testing-tox-lint-pep8
-   git push origin master
+   git push origin main
    git branch --delete 1-testing-tox-lint-pep8
 
 Go to the GitHub website, and close issue 1.
