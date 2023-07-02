@@ -112,6 +112,17 @@ Follow the prompts, we should call our project something descriptive, so if you'
   Choose from 1, 2, 3 [1]: 1
   copyright_holder [University College London]:
 
+Create a new GitHub repository
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You might need to create your Secure Shell Protocol (SSH) keys `here`_.
+User also needs to `Adds a new SSH key to GitHub account`_.
+Then, create a new project on GitHub (or GitLab, WeissLab or your preferred git host), making sure the URL matches
+what you set in step 3 (e.g., `project_url [https://github.com/mxochicale/sksurgeryspherefitting]`.
+
+.. image:: new_project_github.png
+   :height: 400px
+   :alt: Create new project on GitHub
+   :align: center
 
 Initialise git repository
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -120,22 +131,16 @@ Enter the source directory and initialise git repository.
 
   cd sksurgeryspherefitting/
   git init
+  git branch -m main
   git add .
   git commit -m "Initial commit of my sphere fitter"
 
-Create a new project on GitHub (or GitLab, WeissLab or your preferred git host), making sure the URL matches
-what you set in step 3 (e.g., `project_url [https://github.com/mxochicale/sksurgeryspherefitting]`.
-
-.. image:: new_project_github.png
-   :height: 400px
-   :alt: Create new project on weisslab
-   :align: center
 
 Add the remote to git and push your first commit
 ::
 
-   git remote add origin https://github.com/mxochicale/sksurgeryspherefitting.git
-   git push origin master
+   git remote add origin git@github.com:mxochicale/sksurgeryspherefitting.git
+   git push origin main
 
 Visit the web interface to GitHub (or your preferred git host) and checkout out your first commit
 
@@ -148,8 +153,9 @@ You may notice that it says that your commit failed.
 This refers to the continuous integration test having failed, not that your project was lost.
 By the end this tutorial you will have a green tick where now there is a red cross, for know though, don't worry.
 
-
 .. _`cookiecutter`: https://cookiecutter.readthedocs.io/en/latest/
 .. _`sphere fitting algorithm`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/
 .. _`pandoc_installation` : https://pandoc.org/installing.html
 .. _`conda_installation` : https://conda.io/projects/conda/en/latest/user-guide/install/index.html
+.. _`here` : https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+.. _`Adds a new SSH key to GitHub account`: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
