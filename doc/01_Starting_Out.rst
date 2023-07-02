@@ -6,68 +6,40 @@
 Getting Started
 ===============================================
 
-
 Packages, other requirements, and virtual environments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Virtualenv, venv, conda or pyenv can be used to create virtual environments to manage python packages.
 You can use conda env by installing conda for your OS (`conda_installation`_) and use the following yml file with all dependencies.
 ::
 
-   ## Create scikit-surgeryTUTORIAL02VE.yml in your favorite location with the following content:
-   ##
-   ##  scikit-surgeryTUTORIAL02VE.yml
-   ##
-   ## Some useful commands to manage your conda env:
-   ## LIST CONDA ENVS: conda list -n *VE # show list of installed packages
-   ## UPDATE CONDA: conda update -n base -c defaults conda
-   ## INSTALL CONDA EV: conda env create -f *VE.yml
-   ## UPDATE CONDA ENV: conda env update --file *VE.yml --prune
-   ## ACTIVATE CONDA ENV: conda activate *VE
-   ## REMOVE CONDA ENV: conda remove -n *VE --all
-
-   name: scikit-surgeryTUTORIAL02VE
-   channels:
-     - conda-forge
-   dependencies:
-     - python=3.8
-     - pip>=23.0.1
-     - pip:
-        ##############################################
-        ## requirements.txt
-        - cookiecutter
-        - numpy
-        - vtk>=9.2.6
-        - scikit-surgeryvtk>=2.0.1
-        - scikit-surgeryimage
-        - scikit-surgerycore
-        ###############################################
-        ## requirements-dev.txt
-        ##############################################
-        - scipy
-        - tox
-        - pytest
-        - pylint
-        - sphinx
-        - sphinx_rtd_theme
+   conda update -n base -c defaults conda
+   conda create -n sst02VE python=3.8 pip -c conda-forge
+   conda activate sst02VE
+   pip install -r requirements.txt
+   pip install -r requirements-dev.txt
 
 Creating PythonTemplate
 ~~~~~~~~~~~~~~~~~~~~~~~
-Step 1: Create a local directory to host your project.
+Step 1: Launch your conda environment
+::
 
-Step 2: The SciKit-Surgery Python Templates uses `cookiecutter`_ to generate a project from a
+  conda activate sst02VE
+
+Step 2: Create a local directory to host your project.
+
+Step 3: The SciKit-Surgery Python Templates uses `cookiecutter`_ to generate a project from a
 templates. Start by checking you have cookiecutter installed. Otherwise activate your virtual environment.
 ::
 
   pip install cookiecutter
 
-Step 3: Use the Python Template to create your new project.
+Step 4: Use the Python Template to create your new project.
 This tutorial uses a `sphere fitting algorithm`_ as an example case, as it 
 strikes a nice balance between simplicity and usefulness. Fitting models to data
 is a key part of medical image computing, so hopefully the user can see how their own 
 algorithms could be inserted into the software template.
 ::
 
-  conda activate scikit-surgeryTUTORIAL02VE
   cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git
 
 If that doesn't work try,
@@ -75,7 +47,7 @@ If that doesn't work try,
 
   python -m  cookiecutter https://github.com/SciKit-Surgery/PythonTemplate.git 
 
-Follow the prompts, we should call our project something descriptive, so if you're doing sphere fitting:
+Step 5: Follow the prompts, we should call our project something descriptive, so if you're doing sphere fitting:
 ::
 
   project_name [My New Project]: scikit-surgery-sphere-fitting
