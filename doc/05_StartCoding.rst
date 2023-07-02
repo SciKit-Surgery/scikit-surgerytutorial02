@@ -100,7 +100,7 @@ That's it, you've written a sphere fitting algorithm using the Python template. 
    git push origin 1-testing-tox-lint-pep8
 
 Make sure you include a short message (50 chars or less), including the hashtag #1, (#<IssueID>).
-Hence WEISSlab can link the change to the issue you created earlier.
+Hence GitHub can link the change to the issue you created earlier.
 
 Now anyone with access to your git repository can download and use your algorithm. However they're a lot more 
 likely to do that if they can see that your algorithm does what it's supposed to do. This is where the Python

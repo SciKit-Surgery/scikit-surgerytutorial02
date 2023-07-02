@@ -97,8 +97,8 @@ Commit and push your changes.
    git branch --merged | grep -i -v -E "master|main" | xargs git branch -d
    git push origin main
 
-Wait until the continuous integration tests have finished on WEISSLab. You should now be
-able to visit your code on readthedocs or WEISSLab and see three green boxes, showing that 
+Wait until the continuous integration tests have finished on GitHub. You should now be
+able to visit your code on readthedocs and see three green boxes, showing that
 your code is tested (with 100% coverage) and that the docs are building. To anyone 
 considering using your code this would be very encouraging. 
 
