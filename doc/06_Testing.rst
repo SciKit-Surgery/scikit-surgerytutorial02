@@ -50,7 +50,7 @@ go into the test directory,
 And edit the test file 
 ::
 
-   vi test_sksurgeryspherefitting.py
+   vim test_sksurgeryspherefitting.py
 
 The first line imports from the user interface (ui). We'll cover this later in the tutorial, for now let's 
 comment it out 
