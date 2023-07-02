@@ -189,7 +189,7 @@ and with a fitted sphere
 
 .. figure:: https://github.com/SciKit-Surgery/scikit-surgerytutorial02/raw/master/doc/fitted_sphere.gif
 
-For github actions, you will need to amend `/.github/workflows/ci.yml` using only python version 3.7
+For github actions, you will need to amend `/.github/workflows/ci.yml` using only python version 3.8
 ::
 
     jobs:
