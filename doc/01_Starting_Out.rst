@@ -6,12 +6,9 @@
 Getting Started
 ===============================================
 
-Packages and other requirements
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-scikit-surgery-sphere-fitting require pandoc: universal document converter `pandoc_installation`_.
 
-Virtual environments
-~~~~~~~~~~~~~~~~~~~~
+Packages, other requirements, and virtual environments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Virtualenv, venv, conda or pyenv can be used to create virtual environments to manage python packages.
 You can use conda env by installing conda for your OS (`conda_installation`_) and use the following yml file with all dependencies.
 ::
@@ -155,7 +152,6 @@ By the end this tutorial you will have a green tick where now there is a red cro
 
 .. _`cookiecutter`: https://cookiecutter.readthedocs.io/en/latest/
 .. _`sphere fitting algorithm`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/
-.. _`pandoc_installation` : https://pandoc.org/installing.html
 .. _`conda_installation` : https://conda.io/projects/conda/en/latest/user-guide/install/index.html
 .. _`here` : https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 .. _`Adds a new SSH key to GitHub account`: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent

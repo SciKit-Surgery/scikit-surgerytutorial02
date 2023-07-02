@@ -14,7 +14,6 @@ html documentation, using the command
    tox -e docs
 
 We use `readthedocs`_ to host our documentation, as it is then easily accessible to all and sundry.
-You might need to install pandoc which `pandoc_installation`_
 At this stage you'll need to create an account on readthedocs. This is easy and free.
 
 Once you have an account, you can import your project manually `readthedocs_import`_, filling in the project name
@@ -61,5 +60,4 @@ Your documentation on readthedocs should now be automatically updated each time 
 .. _`readthedocs`: https://readthedocs.org/
 .. _`webhook`: https://en.wikipedia.org/wiki/Webhook
 .. _`github_incoming_webhook`: https://docs.github.com/en/developers/webhooks-and-events/webhooks/about-webhooks
-.. _`pandoc_installation`: https://pandoc.org/installing.html
 .. _`readthedocs_import`: https://readthedocs.org/dashboard/import/manual
