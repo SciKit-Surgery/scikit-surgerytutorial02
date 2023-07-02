@@ -36,10 +36,10 @@ You can use conda env by installing conda for your OS (`conda_installation`_) an
         ## requirements.txt
         - cookiecutter
         - numpy
-        - vtk>=9.2.5
+        - vtk>=9.2.6
         - scikit-surgeryvtk>=2.0.1
-        - scikit-surgeryimage>=0.10.1
-        - scikit-surgerycore>=0.6.10
+        - scikit-surgeryimage
+        - scikit-surgerycore
         ###############################################
         ## requirements-dev.txt
         ##############################################
