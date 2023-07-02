@@ -80,11 +80,7 @@ Follow the prompts, we should call our project something descriptive, so if you'
 
   project_name [My New Project]: scikit-surgery-sphere-fitting
   project_slug [scikit-surgery-sphere-fitting]: sksurgeryspherefitting
-  project_description [scikit-surgery-sphere-fitting is a Python package]:
-                                  scikit-surgery-sphere-fitting implements
-                                  a least squares sphere fitting algorithm,
-                                  to read a vtk poly data file, a config file,
-                                  and outputs the fitted sphere.
+  project_description [scikit-surgery-sphere-fitting is a Python package]: scikit-surgery-sphere-fitting implements a least squares sphere fitting algorithm, to read a vtk poly data file, a config file, and outputs the fitted sphere.
   pkg_name [sksurgeryspherefitting]:
   Select repository_server:
   1 - https://github.com
