@@ -133,7 +133,8 @@ tests/test_sksurgeryspherefitting_demo.py and cut and paste this:
 
 
 Note that we need some testing data here. If you have a vtk surface file that you'd like to 
-try fitting a sphere to you can subsitute it above. Other wise you can get one from `here`_
+try fitting a sphere to you can substitute it above.
+If you are on windows OS, you might need to download vtk surface file from `here`_.
 ::
 
    mkdir data
@@ -208,7 +209,7 @@ Commit your changes and push to origin
    git push origin  2-implement-ui
 
 
-.. _`here`: https://gihub.com/thompson318/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
+.. _`here`: https://github.com/thompson318/scikit-surgery-sphere-fitting/raw/master/data/CT_Level_1.vtp
 .. _`vtk`: https://pypi.org/project/vtk/
 .. _`scikit-surgeryvtk`: https://pypi.org/project/scikit-surgeryvtk/
 .. _`vtk_GeometryViewer`: https://kitware.github.io/vtk-js/examples/GeometryViewer/index.html
