@@ -11,7 +11,7 @@ tidily written? However, the aim of the SciKit-Surgery Python template is to hel
 you, but will be downloaded by others, modified and spread about. That's a lot more likely to happen if your code
 can be easily understood by others, and that's what lint helps you do. 
 
-1. Identifying linting errors
+1. Identifying linting errors    
 If we scroll back up through the test output in your terminal, we'll start finding some linting errors. Depending on
 how well you've cut and pasted you may have other errors, but let's look at the first one I get, which
 looks like this;
