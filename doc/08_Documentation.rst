@@ -55,6 +55,13 @@ And enter the readthedocs url into the URL field.
 
 Test it out.
 Your documentation on readthedocs should now be automatically updated each time you push a commit to GitHub.
+You should go to build menu in your readthedocs project.
+
+.. image:: read_the_docs_07_github.png
+   :height: 400px
+   :alt: Fill in the boxes
+   :align: center
+
 
 .. _`sphinx`: http://www.sphinx-doc.org/en/master/
 .. _`readthedocs`: https://readthedocs.org/
