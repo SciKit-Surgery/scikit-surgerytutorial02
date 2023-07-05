@@ -88,14 +88,14 @@ SciKit-Surgery python template will have created a readme.rst file, but this wil
 information on your module. If you're looking for inspiration checkout out the 
 readme for `scikit-surgery-sphere-fitting`_. 
 
-Commit and push your changes.
+Commit, push your changes and delete local merged branches
 ::
 
    git add setup.py README.rst
    git commit -m "updated setup.py and readme (#2)"
    git checkout main
-   git branch --merged | grep -i -v -E "master|main" | xargs git branch -d
    git push origin main
+   git branch --merged | grep -i -v -E "master|main" | xargs git branch -d
 
 Wait until the continuous integration tests have finished on GitHub. You should now be
 able to visit your code on readthedocs and see three green boxes, showing that
