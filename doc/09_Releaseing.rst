@@ -88,14 +88,16 @@ SciKit-Surgery python template will have created a readme.rst file, but this wil
 information on your module. If you're looking for inspiration checkout out the 
 readme for `scikit-surgery-sphere-fitting`_. 
 
-Commit, push your changes and delete local merged branches
+Commit, push your changes and delete local merged branches.
+Please referee to this `git cheat sheet`_ for other git commands.
 ::
 
    git add setup.py README.rst
    git commit -m "updated setup.py and readme (#2)"
    git checkout main
    git push origin main
-   git branch --merged | grep -i -v -E "master|main" | xargs git branch -d
+   git branch --delete 1-testing-tox-lint-pep8
+   git branch --delete 2-implement-ui
 
 Wait until the continuous integration tests have finished on GitHub. You should now be
 able to visit your code on readthedocs and see three green boxes, showing that
@@ -103,3 +105,4 @@ your code is tested (with 100% coverage) and that the docs are building. To anyo
 considering using your code this would be very encouraging. 
 
 .. _`scikit-surgery-sphere-fitting`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/?badge=latest
+.. _`git cheat sheet`: https://education.github.com/git-cheat-sheet-education.pdf
