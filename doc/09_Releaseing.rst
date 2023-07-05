@@ -86,7 +86,7 @@ The readme.rst file will function as the title page of your module. It should pr
 information to make it clear what the module is intended to do and how to use it. The 
 SciKit-Surgery python template will have created a readme.rst file, but this will need updating with 
 information on your module. If you're looking for inspiration checkout out the 
-readme for `scikit-surgery-sphere-fitting`_. 
+`README.rst`_ for `scikit-surgerybard`_.
 
 Commit, push your changes and delete local merged branches.
 Please referee to this `git cheat sheet`_ for other git commands.
@@ -104,5 +104,6 @@ able to visit your code on readthedocs and see three green boxes, showing that
 your code is tested (with 100% coverage) and that the docs are building. To anyone 
 considering using your code this would be very encouraging. 
 
-.. _`scikit-surgery-sphere-fitting`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/?badge=latest
+.. _`README.rst`_ : https://github.com/SciKit-Surgery/scikit-surgerybard/blob/master/README.rst
+.. _`scikit-surgerybard`: https://scikit-surgerybard.readthedocs.io/en/latest/
 .. _`git cheat sheet`: https://education.github.com/git-cheat-sheet-education.pdf
