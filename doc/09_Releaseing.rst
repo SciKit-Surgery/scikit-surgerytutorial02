@@ -104,6 +104,6 @@ able to visit your code on readthedocs and see three green boxes, showing that
 your code is tested (with 100% coverage) and that the docs are building. To anyone 
 considering using your code this would be very encouraging. 
 
-.. _`README.rst`_ : https://github.com/SciKit-Surgery/scikit-surgerybard/blob/master/README.rst
+.. _`README.rst`: https://github.com/SciKit-Surgery/scikit-surgerybard/blob/master/README.rst
 .. _`scikit-surgerybard`: https://scikit-surgerybard.readthedocs.io/en/latest/
 .. _`git cheat sheet`: https://education.github.com/git-cheat-sheet-education.pdf
