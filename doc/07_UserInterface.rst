@@ -134,7 +134,8 @@ tests/test_sksurgeryspherefitting_demo.py and cut and paste this:
 
 Note that we need some testing data here. If you have a vtk surface file that you'd like to 
 try fitting a sphere to you can substitute it above.
-If you are on windows OS, you might need to download vtk surface file from `here`_.
+If you are on windows OS, you might need to download vtk surface file from `here`_ as `wget`
+might not be available in your terminal commands.
 ::
 
    mkdir data
