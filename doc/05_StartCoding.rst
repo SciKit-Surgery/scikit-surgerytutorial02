@@ -25,11 +25,12 @@ The SciKit-Surgery Python template has already populated this with a couple of e
 These are nice examples, but a bit too simple for our tutorial. So lets delete them and create our own file, 
 sphere_fitting.py. I chose sphere fitting as it was useful for me at the time, feel free to insert your own 
 algorithm at this point.
-The following code uses vim to edit the files, you can use whatever editor you like.
+The following code uses vim to edit the files. See `vim`_ for some basic commands.
+You can use whatever editor you like.
 ::
 
    rm addition.py multiplication.py
-   vi sphere_fitting.py
+   vim sphere_fitting.py
 
 
 Copy and paste the following into your editor.
@@ -99,10 +100,11 @@ That's it, you've written a sphere fitting algorithm using the Python template. 
    git push origin 1-testing-tox-lint-pep8
 
 Make sure you include a short message (50 chars or less), including the hashtag #1, (#<IssueID>).
-Hence WEISSlab can link the change to the issue you created earlier.
+Hence GitHub can link the change to the issue you created earlier.
 
 Now anyone with access to your git repository can download and use your algorithm. However they're a lot more 
 likely to do that if they can see that your algorithm does what it's supposed to do. This is where the Python
 template starts being really helpful. 
 
 .. _`See page 44 of this`: https://magazines-static.raspberrypi.org/issues/full_pdfs/000/000/030/original/HelloWorld07.pdf#page=44
+.. _`vim`: https://linuxhandbook.com/basic-vim-commands/

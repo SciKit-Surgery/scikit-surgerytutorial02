@@ -8,70 +8,33 @@ Publishing
 
 Finally, if you're mostly happy with your project you can add to the Python package index, 
 where it will be easy for anyone to find and use your library. The Python 
-Template provides code at the end of .gitlab-ci.yml to deploy your library when 
-you create a tag with git. 
+Template provides code at the end of ci.yml to deploy your library when you create a tag with git.
+
 ::
+  deploy:
+    runs-on: ubuntu-22.04
+    needs: test
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/checkout@master
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
 
-   deploy pip to PyPI:
-    stage: deploy
-    when: manual
-    only:
-      - tags
+      - name: Install dependencies
+        run: python -m pip install wheel twine setuptools
 
-    environment:
-      name: PyPI
-      url: https://pypi.python.org/pypi/scikit-surgery-sphere-fitting
+      - name: Build wheel
+        run: |
+          python setup.py sdist bdist_wheel
 
-    tags:
-      - pip-production
-
-    artifacts:
-      paths:
-        - dist/
-
-    script:
-      # Install packages required to build/publish
-      # remove any previous distribution files
-      - pip install wheel twine setuptools
-      - rm -rf dist
-
-      # bundle installer
-      - python setup.py bdist_wheel
-
-      # Upload to pypi
-      - twine upload --repository pypi dist/* --username $PYPI_USER --password $PYPI_PASS
-
-You should probably change this to the test.pypi index before you try this for the first time, so change it to 
-::
-
-   deploy pip to PyPI:
-    stage: deploy
-    when: manual
-    only:
-      - tags
-
-    environment:
-      name: PyPI
-      url: https://test.pypi.python.org/pypi/scikit-surgery-sphere-fitting
-
-    tags:
-      - pip-production
-
-    artifacts:
-      paths:
-        - dist/
-
-    script:
-      # Install packages required to build/publish
-      # remove any previous distribution files
-      - pip install wheel twine setuptools
-      - rm -rf dist
-
-      # bundle installer
-      - python setup.py bdist_wheel
-
-      # Upload to pypi
-      - twine upload --repository test.pypi dist/* --username $PYPI_USER --password $PYPI_PASS
+      - name: Publish package if tagged release
+        if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
 
 Now tag a release:
 ::
@@ -82,10 +45,10 @@ Now tag a release:
 You might like to add some release cycle versions (schedules for alpha, beta, RC and full bugfix support).
 See how `python versions`_ are done.
 
-When you visit GitHub there should now be a manual build stage called "deploy pip to PyPi". You can
+When you visit GitHub there should now be a manual build stage called "deploy". You can
 trigger this manually and deploy your code to PyPi. To do this you will need an account on PyPi and to add
-$PYPI_USER and $PYPI_PAS as variables in your GitHub project.
-
+PYPI_API_TOKEN and $PYPI_PAS as variables in your GitHub project `TEST_PYPI_API_TOKEN`_.
 
 .. _`scikit-surgery-sphere-fitting`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/?badge=latest
 .. _`python versions`: https://peps.python.org/pep-0602
+.. _`TEST_PYPI_API_TOKEN`: https://packaging.python.org/en/latest/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/#saving-credentials-on-github

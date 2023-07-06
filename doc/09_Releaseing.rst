@@ -71,8 +71,8 @@ The most important thing to do is to update the
       install_requires=[
           'numpy>=1.11',
           'spicy',
-          'vtk>=9.2.5',
-          'scikit-surgeryvtk==2.0rc0'
+          'vtk>=9.2.6',
+          'scikit-surgeryvtk>=2.0.1'
       ],
 
       entry_points={
@@ -86,20 +86,24 @@ The readme.rst file will function as the title page of your module. It should pr
 information to make it clear what the module is intended to do and how to use it. The 
 SciKit-Surgery python template will have created a readme.rst file, but this will need updating with 
 information on your module. If you're looking for inspiration checkout out the 
-readme for `scikit-surgery-sphere-fitting`_. 
+`README.rst`_ for `scikit-surgerybard`_.
 
-Commit and push your changes.
+Commit, push your changes and delete local merged branches.
+Please referee to this `git cheat sheet`_ for other git commands.
 ::
 
    git add setup.py README.rst
    git commit -m "updated setup.py and readme (#2)"
-   git checkout master
-   git merge --no-ff 2-implement-ui
-   git push origin master
+   git checkout main
+   git push origin main
+   git branch --delete 1-testing-tox-lint-pep8
+   git branch --delete 2-implement-ui
 
-Wait until the continuous integration tests have finished on WEISSLab. You should now be
-able to visit your code on readthedocs or WEISSLab and see three green boxes, showing that 
+Wait until the continuous integration tests have finished on GitHub. You should now be
+able to visit your code on readthedocs and see three green boxes, showing that
 your code is tested (with 100% coverage) and that the docs are building. To anyone 
 considering using your code this would be very encouraging. 
 
-.. _`scikit-surgery-sphere-fitting`: https://scikit-surgery-sphere-fitting.readthedocs.io/en/latest/?badge=latest
+.. _`README.rst`: https://github.com/SciKit-Surgery/scikit-surgerybard/blob/master/README.rst
+.. _`scikit-surgerybard`: https://scikit-surgerybard.readthedocs.io/en/latest/
+.. _`git cheat sheet`: https://education.github.com/git-cheat-sheet-education.pdf

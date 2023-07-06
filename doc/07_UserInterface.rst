@@ -133,7 +133,9 @@ tests/test_sksurgeryspherefitting_demo.py and cut and paste this:
 
 
 Note that we need some testing data here. If you have a vtk surface file that you'd like to 
-try fitting a sphere to you can subsitute it above. Other wise you can get one from `here`_
+try fitting a sphere to you can substitute it above.
+If you are on windows OS, you might need to download vtk surface file from `here`_ as `wget`
+might not be available in your terminal commands.
 ::
 
    mkdir data
@@ -146,8 +148,8 @@ Before you run again (e.g. `tox -r`), we need to tell tox about the extra depend
 
    numpy>=1.11
    spicy
-   vtk>=9.2.5
-   scikit-surgeryvtk==2.0.1
+   vtk>=9.2.6
+   scikit-surgeryvtk>=2.0.1
 
 You will need to add `vtk`_, and `scikit-surgeryvtk`_ in setup.py for the `install_requires`:
 ::
@@ -155,8 +157,8 @@ You will need to add `vtk`_, and `scikit-surgeryvtk`_ in setup.py for the `insta
     install_requires=[
         'numpy>=1.11',
         'spicy',
-        'vtk>=9.2.5',
-        'scikit-surgeryvtk==2.0.1'
+        'vtk>=9.2.6',
+        'scikit-surgeryvtk>=2.0.1'
     ],
 
 
@@ -188,7 +190,7 @@ and with a fitted sphere
 
 .. figure:: https://github.com/SciKit-Surgery/scikit-surgerytutorial02/raw/master/doc/fitted_sphere.gif
 
-For github actions, you will need to amend `/.github/workflows/ci.yml` using only python version 3.7
+For github actions, you will need to amend `/.github/workflows/ci.yml` using only python version 3.8
 ::
 
     jobs:
@@ -208,7 +210,7 @@ Commit your changes and push to origin
    git push origin  2-implement-ui
 
 
-.. _`here`: https://gihub.com/thompson318/scikit-surgery-sphere-fitting/blob/master/data/CT_Level_1.vtp
+.. _`here`: https://github.com/thompson318/scikit-surgery-sphere-fitting/raw/master/data/CT_Level_1.vtp
 .. _`vtk`: https://pypi.org/project/vtk/
 .. _`scikit-surgeryvtk`: https://pypi.org/project/scikit-surgeryvtk/
 .. _`vtk_GeometryViewer`: https://kitware.github.io/vtk-js/examples/GeometryViewer/index.html

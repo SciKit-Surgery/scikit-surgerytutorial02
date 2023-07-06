@@ -50,7 +50,7 @@ go into the test directory,
 And edit the test file 
 ::
 
-   vi test_sksurgeryspherefitting.py
+   vim test_sksurgeryspherefitting.py
 
 The first line imports from the user interface (ui). We'll cover this later in the tutorial, for now let's 
 comment it out 
@@ -165,6 +165,12 @@ now try running tox again, you should see a bunch of output ending something lik
    ERROR:   lint: commands failed
 
 Which tells us that the functional unit tests worked, but that "lint" failed. 
+
+One alternative way to also linting and unit testing your individual files is using:
+::
+
+    pylint --rcfile=tests/pylintrc $LIB_PATH/python_file.py
+    pytest -v -s test/test_name.py
 
 .. _`PEP 8`: https://www.python.org/dev/peps/pep-0008/
 
